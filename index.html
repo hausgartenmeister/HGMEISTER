@@ -1,0 +1,546 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Professionelle Reinigungs-, Gartenpflege-, Laubentfernung- und Hochdruckreinigungsdienste in Lahr, Deutschland. Zuverlässiger lokaler Service für Privat- und Geschäftskunden." />
+    <meta name="keywords" content="Reinigungsservice Lahr, Gartenpflege Lahr, Hochdruckreinigung Lahr, Außenreinigung Lahr Deutschland, Laubentfernung Lahr, Herbstreinigung Garten Lahr, Gebäudereinigung Lahr, Hausmeisterservice Lahr" />
+    <meta name="theme-color" content="#0A0F1A" />
+    <title>Reinigungs-, Garten- und Außenarbeiten in Lahr, Deutschland | Hausgarten Meister</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'deep-navy': '#0A0F1A',
+              'lighter-navy': '#161B28',
+              'soft-gold': '#E5D1B0',
+              'muted-gray': '#A0A5B1',
+              'white': '#FFFFFF',
+            },
+            fontFamily: {
+              sans: ['Playfair Display', 'serif'],
+            },
+            boxShadow: {
+              glow: '0 25px 80px rgba(15, 23, 42, 0.08)',
+            },
+            backgroundImage: {
+              aura: 'radial-gradient(circle at top, rgba(15, 23, 42, 0.05), transparent 30%), radial-gradient(circle at center, rgba(15, 23, 42, 0.03), transparent 35%), radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.02), transparent 25%)',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: #0A0F1A;
+        min-height: 100%;
+      }
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
+        background-size: 18px 18px;
+        opacity: 0.22;
+        z-index: -1;
+      }
+      #home {
+        position: relative;
+        overflow: hidden;
+      }
+      #home::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(circle at 22% 12%, rgba(229,209,176,0.12), transparent 25%),
+                          radial-gradient(circle at 82% 10%, rgba(160,165,177,0.08), transparent 18%),
+                          radial-gradient(circle at 50% 80%, rgba(255,255,255,0.04), transparent 20%);
+        opacity: 0.92;
+        transform: translate3d(var(--hero-parallax, 0px), 0, 0);
+        transition: transform 0.12s ease-out;
+        z-index: 0;
+      }
+      #home > .mx-auto {
+        position: relative;
+        z-index: 1;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(1.25rem) scale(0.98);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        will-change: opacity, transform;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      .reveal-delay-small {
+        transition-delay: 0.12s;
+      }
+      .reveal-delay-medium {
+        transition-delay: 0.22s;
+      }
+      .reveal-delay-large {
+        transition-delay: 0.32s;
+      }
+      a,
+      button {
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+      }
+      a:hover,
+      button:hover {
+        transform: translateY(-1px) scale(1.01);
+      }
+      a:active,
+      button:active {
+        transform: translateY(0) scale(0.98);
+      }
+      .pressed {
+        transform: translateY(1px) scale(0.98) !important;
+      }
+      a,
+      button {
+        cursor: pointer;
+      }
+      .hover-soft-shadow:hover {
+        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+      }
+      .card-hover {
+        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-6px);
+        border-color: rgba(229, 209, 176, 0.24);
+        box-shadow: 0 30px 75px rgba(15, 23, 42, 0.12);
+      }
+      .hero-text,
+      .hero-image,
+      .section-block {
+        opacity: 0;
+        transform: translateY(1.5rem);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+      }
+      .hero-text.visible,
+      .hero-image.visible,
+      .section-block.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .swipe-left,
+      .swipe-right {
+        opacity: 0;
+        transform: translateX(0) translateY(1.5rem);
+        transition: opacity 2.4s ease, transform 2.4s ease;
+      }
+      .swipe-left {
+        transform: translateX(-2.25rem) translateY(1.5rem);
+      }
+      .swipe-right {
+        transform: translateX(2.25rem) translateY(1.5rem);
+      }
+      .swipe-left.visible,
+      .swipe-right.visible {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+      }
+      .hero-text {
+        animation: slideInLeft 1s ease-out 0.2s both;
+      }
+      .hero-image {
+        animation: slideInRight 1s ease-out 0.4s both;
+      }
+      @keyframes slideInLeft {
+        from { transform: translateX(-50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      @keyframes slideInRight {
+        from { transform: translateX(50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      details summary::-webkit-details-marker {
+        display: none;
+      }
+      details summary {
+        list-style: none;
+      }
+      details[open] summary .faq-icon {
+        transform: rotate(180deg);
+      }
+      .faq-icon {
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="text-muted-gray antialiased m-0 p-0">
+    <div class="relative overflow-hidden">
+      <header class="border-b border-lighter-navy bg-lighter-navy/90 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-[104rem] items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
+          <a href="#home" class="inline-flex items-center">
+            <span class="font-semibold text-soft-gold tracking-[0.18em] uppercase">HAUS-GARTEN MEISTER</span>
+          </a>
+          <nav class="hidden items-center gap-8 text-sm font-medium text-muted-gray md:flex">
+            <a href="#home" class="transition hover:text-soft-gold">Startseite</a>
+            <a href="#core" class="transition hover:text-soft-gold">Über uns</a>
+            <a href="#features" class="transition hover:text-soft-gold">Leistungen</a>
+            <a href="#allo" class="transition hover:text-soft-gold">Warum wir</a>
+          </nav>
+          <div class="flex items-center gap-3">
+            <a href="#contact" class="hidden rounded-2xl border border-soft-gold bg-soft-gold px-4 py-2 text-sm font-semibold text-deep-navy transition hover:bg-soft-gold/90 md:inline-flex">Kontakt</a>
+            <button id="mobile-menu-button" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-lighter-navy text-soft-gold hover:bg-lighter-navy/80 transition">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-lighter-navy/95 backdrop-blur-xl border-t border-lighter-navy">
+          <div class="px-4 py-6 space-y-4">
+            <a href="#home" class="block text-muted-gray hover:text-soft-gold transition py-2">Startseite</a>
+            <a href="#core" class="block text-muted-gray hover:text-soft-gold transition py-2">Über uns</a>
+            <a href="#features" class="block text-muted-gray hover:text-soft-gold transition py-2">Leistungen</a>
+            <a href="#allo" class="block text-muted-gray hover:text-soft-gold transition py-2">Warum wir</a>
+            <a href="#contact" class="block bg-soft-gold text-deep-navy px-4 py-2 rounded-2xl text-center font-semibold hover:bg-soft-gold/80 transition">Kontakt</a>
+          </div>
+        </div>
+      </header>
+
+      <section id="home" class="relative overflow-hidden bg-deep-navy py-6 sm:py-10">
+        <div class="mx-auto grid max-w-[104rem] gap-10 px-4 sm:px-6 lg:px-8 lg:grid-cols-[0.75fr_0.9fr] lg:items-stretch">
+          <div class="hidden lg:block relative h-full overflow-hidden rounded-[2.5rem] border border-lighter-navy bg-lighter-navy shadow-glow order-1 lg:order-2 hero-image">
+            <div class="absolute -right-8 top-8 h-44 w-44 rounded-full bg-accent-green/30 blur-3xl"></div>
+            <div class="absolute -left-8 bottom-10 h-36 w-36 rounded-full bg-accent-green/15 blur-3xl"></div>
+            <img src="images/FIRSTFOTO.jpg" alt="Hero image" class="relative h-full w-full rounded-[2.5rem] object-cover shadow-[0_35px_100px_rgba(15,23,42,0.12)]" />
+          </div>
+          <div class="relative overflow-hidden rounded-[2.5rem] border border-lighter-navy bg-lighter-navy p-8 shadow-glow sm:p-10 order-2 lg:order-1 text-center hero-text">
+            <h1 class="mt-8 text-5xl font-semibold tracking-[-0.75px] text-soft-gold sm:text-6xl lg:text-7xl">HAUS GARTEN MEISTER</h1>
+            <img src="images/FIRSTFOTO.jpg" alt="Hero image" class="mt-8 mx-auto block w-full max-w-[34rem] rounded-[2rem] object-cover shadow-[0_35px_100px_rgba(15,23,42,0.12)] lg:hidden" />
+            <p class="mt-8 max-w-2xl text-base leading-8 text-muted-gray sm:text-xl mx-auto">Professionelle Reinigungs-, Garten- und Außenarbeiten in Lahr, Deutschland</p>
+            <p class="mt-6 max-w-2xl text-base leading-8 text-muted-gray sm:text-xl mx-auto">Wir bieten hochwertige Reinigungs-, Gartenpflege- und Außenarbeiten für Privat- und Geschäftskunden in Lahr und Umgebung an.</p>
+            <p class="mt-6 max-w-2xl text-base leading-8 text-muted-gray sm:text-xl mx-auto">Von gründlicher Innenreinigung bis hin zu schweren Außenarbeiten wie Hochdruckreinigung, Oberflächenreinigung und saisonaler Gartenpflege – wir liefern zuverlässige und professionelle Ergebnisse.</p>
+            <p class="mt-6 text-sm uppercase tracking-[0.35em] text-soft-gold">Sauber. Stark. Zuverlässig.</p>
+            <p class="mt-3 text-sm text-muted-gray">Fordern Sie noch heute Ihr kostenloses Angebot an.</p>
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <a href="#contact" class="inline-flex items-center justify-center rounded-[1.5rem] bg-soft-gold px-6 py-3 text-sm font-semibold text-deep-navy shadow-lg shadow-accent-green/10 transition hover:bg-soft-gold/80">Kontakt</a>
+              <a href="#features" class="inline-flex items-center justify-center rounded-[1.5rem] border border-lighter-navy bg-lighter-navy px-6 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80">Unsere Leistungen</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="core" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
+          <div class="reveal py-10 md:py-14">
+            <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+              <div class="space-y-8 text-center sm:text-left order-1 lg:order-2">
+                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray">Über uns</p>
+                <h2 class="text-[36px] font-semibold leading-[110%] tracking-[-0.96px] text-soft-gold sm:text-[44px] xl:text-[48px]">Wir sind ein professionelles Dienstleistungsunternehmen aus Lahr.</h2>
+                <p class="max-w-xl text-lg leading-8 text-muted-gray">Wir sind ein professionelles Dienstleistungsunternehmen mit Sitz in Lahr, Deutschland, spezialisiert auf Reinigung, Gartenpflege und Außenarbeiten.</p>
+                <p class="max-w-xl text-lg leading-8 text-muted-gray">Unser Fokus liegt auf Qualität, Zuverlässigkeit und Kundenzufriedenheit. Mit professionellen Werkzeugen und modernen Techniken liefern wir starke und langlebige Ergebnisse.</p>
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div class="rounded-[1.75rem] border border-soft-gold bg-soft-gold p-6">
+                    <h3 class="text-lg font-semibold text-deep-navy">Qualität und Zuverlässigkeit</h3>
+                    <p class="mt-3 text-deep-navy">Wir arbeiten präzise, termingerecht und mit hochwertigen Materialien für nachhaltige Ergebnisse.</p>
+                  </div>
+                  <div class="sm:hidden">
+                    <img src="images/PastrimAvull.jpg" alt="Professionelle Mitarbeiter bei der Arbeit" class="w-full rounded-[2rem] border border-lighter-navy object-cover shadow-[0_25px_80px_rgba(15,23,42,0.08)]" />
+                  </div>
+                  <div class="rounded-[1.75rem] border border-lighter-navy bg-lighter-navy p-6">
+                    <h3 class="text-lg font-semibold text-soft-gold">Kleine und große Projekte</h3>
+                    <p class="mt-3 text-muted-gray">Ob Einfamilienhaus oder Gewerbeobjekt – wir übernehmen Aufgaben jeder Größe mit größter Sorgfalt.</p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
+                  <a href="#contact" class="inline-flex items-center justify-center rounded-2xl bg-soft-gold px-6 py-3 text-sm font-semibold text-deep-navy transition hover:bg-soft-gold/90">Jetzt anfragen</a>
+                  <a href="#allo" class="inline-flex items-center justify-center rounded-2xl border border-lighter-navy bg-lighter-navy px-6 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80">Mehr erfahren</a>
+                </div>
+              </div>
+              <div class="relative order-2 lg:order-1 hidden lg:block">
+                <img src="images/PastrimAvull.jpg" alt="Professionelle Mitarbeiter bei der Arbeit" class="w-full rounded-[2rem] border border-lighter-navy object-cover shadow-[0_25px_80px_rgba(15,23,42,0.08)]" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <main class="m-0 p-0">
+        <section id="features" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
+          <div class="reveal py-10 md:py-14">
+            <div class="reveal swipe-right text-center mb-12">
+              <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">Leistungen</p>
+              <h2 class="mt-4 text-2xl font-semibold tracking-[-0.72px] text-soft-gold md:text-3xl xl:text-4xl">Reinigungs-, Gartenpflege- und Außenarbeiten aus einer Hand.</h2>
+              <p class="mt-6 max-w-2xl mx-auto text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Wir sorgen dafür, dass Ihr Zuhause oder Ihr Unternehmen sauber, frisch und hygienisch bleibt.</p>
+            </div>
+            <div class="grid gap-6 lg:grid-cols-3">
+              <div class="reveal rounded-[2rem] border border-lighter-navy bg-lighter-navy p-6 shadow-glow transition hover:-translate-y-2 hover:border-lighter-navy">
+                <div class="flex h-full flex-col justify-between gap-4">
+                  <div class="space-y-4">
+                    <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">Reinigungsdienste</p>
+                    <h2 class="text-2xl font-semibold text-soft-gold">Hausreinigung, Büroreinigung und mehr</h2>
+                    <p class="text-muted-gray">Hausreinigung (regelmäßig und Tiefenreinigung), Büroreinigung, Einzugs- / Auszugsreinigung, Fensterreinigung sowie Boden- und Oberflächenreinigung.</p>
+                  </div>
+                  <img src="images/quality_restoration_20260418222950628.JPEG" alt="Reinigungsdienst" class="mt-4 h-56 w-full rounded-[1.75rem] object-cover" />
+                </div>
+              </div>
+              <div class="space-y-6 lg:col-span-2">
+                <div class="reveal rounded-[2rem] border border-lighter-navy bg-lighter-navy p-6 shadow-glow transition hover:-translate-y-2 hover:border-lighter-navy">
+                  <img src="images/Garazhda.jpg" alt="Gartenpflege" class="h-56 w-full rounded-[1.75rem] object-cover" />
+                </div>
+                <div class="grid gap-6 lg:grid-cols-3">
+                  <div class="reveal rounded-[2rem] border border-soft-gold bg-soft-gold p-6 shadow-glow transition hover:-translate-y-2 hover:border-soft-gold">
+                    <p class="text-sm uppercase tracking-[0.35em] text-deep-navy">Außenarbeiten</p>
+                    <h3 class="mt-4 text-xl font-semibold text-deep-navy">Hochdruckreinigung</h3>
+                    <p class="mt-3 text-deep-navy">Einfahrten, Wände und Terrassen erhalten eine gründliche Reinigung.</p>
+                  </div>
+                  <div class="reveal rounded-[2rem] border border-lighter-navy bg-lighter-navy p-6 shadow-glow transition hover:-translate-y-2 hover:border-lighter-navy">
+                    <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">Oberflächen</p>
+                    <h3 class="mt-4 text-xl font-semibold text-soft-gold">Stein- und Flächenreinigung</h3>
+                    <p class="mt-3 text-muted-gray">Fachgerechtes Reinigen und Erneuern von Steinflächen und Außenbereichen.</p>
+                  </div>
+                  <div class="reveal rounded-[2rem] border border-soft-gold bg-soft-gold p-6 shadow-glow transition hover:-translate-y-2 hover:border-soft-gold">
+                    <p class="text-sm uppercase tracking-[0.35em] text-deep-navy">Schwerarbeit</p>
+                    <h3 class="mt-4 text-xl font-semibold text-deep-navy">Betonabbruch und Abbrucharbeiten</h3>
+                    <p class="mt-3 text-deep-navy">Professioneller Abbruch mit Hilti-Werkzeugen und Außenflächen-Vorbereitung.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="galerie" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
+          <div class="reveal py-10 md:py-14">
+            <div class="text-center mb-10">
+              <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">Galerie</p>
+              <h2 class="mt-4 text-[36px] font-semibold tracking-[-0.72px] text-soft-gold md:text-[44px] xl:text-[48px]">Visuelle Eindrücke unserer Arbeit</h2>
+              <p class="mt-6 max-w-2xl mx-auto text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Hier sehen Sie Beispiele unserer Reinigungs-, Gartenpflege- und Außenarbeiten in Lahr.</p>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div class="reveal swipe-left overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-[350px] sm:h-[450px] lg:h-[350px]">
+                <img src="images/IMG_1664.JPG" alt="Galerie Bild 1" class="h-full w-full object-fill" />
+              </div>
+              <div class="reveal swipe-right overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-[350px] sm:h-[450px] lg:h-[350px]">
+                <img src="images/A7.jpg" alt="Galerie Bild 2" class="h-full w-full object-fill" />
+              </div>
+              <div class="reveal swipe-left overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-[350px] sm:h-[450px] lg:h-[350px]">
+                <img src="images/A5.jpeg" alt="Galerie Bild 3" class="h-full w-full object-fill" />
+              </div>
+              <div class="reveal swipe-right overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-[350px] sm:h-[450px] lg:h-[350px]">
+                <img src="images/A1.jpg" alt="Galerie Bild 4" class="h-full w-full object-fill" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="blog" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
+          <div class="reveal py-10 md:py-14 lg:py-16">
+            <div class="flex flex-wrap items-start justify-between gap-y-12 gap-x-20">
+              <div class="max-w-[760px] text-center sm:text-left">
+                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray">Aktuelles</p>
+                <h2 class="mt-4 text-[36px] font-semibold leading-[120%] tracking-[-0.72px] text-soft-gold md:text-[44px] xl:text-[48px]">Neuigkeiten aus Reinigung, Gartenpflege und Außenarbeiten</h2>
+                <p class="mt-6 mb-[-14px] max-w-[760px] text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Erfahren Sie mehr über unsere aktuellen Projekte, Tipps zur Pflege Ihrer Außenanlagen und saisonale Serviceangebote in Lahr.</p>
+              </div>
+              <a href="#blog" class="hidden rounded-[8px] border border-lighter-navy bg-lighter-navy px-5 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80 lg:inline-flex">Mehr anzeigen</a>
+            </div>
+
+            <div class="mt-12 grid gap-y-12 gap-x-8 md:grid-cols-2 xl:grid-cols-3">
+              <article class="reveal swipe-left flex flex-col rounded-[2rem] border border-lighter-navy bg-lighter-navy p-7 shadow-glow transition hover:-translate-y-1">
+                <img src="images/THYRJE ME HILT.jpg" alt="Reinigungsdienst" class="mb-5 h-[220px] w-full rounded-[1.75rem] object-cover md:h-[240px] xl:h-[280px]" />
+                <span class="inline-flex rounded-full bg-lighter-navy px-3 py-1 text-[14px] font-medium text-muted-gray">Kategorie</span>
+                <p class="mt-3 text-[14px] font-normal text-muted-gray">7 min Lesezeit</p>
+                <h3 class="mt-4 text-[20px] font-semibold leading-[140%] tracking-[-0.48px] text-soft-gold md:text-[24px]">Schnelle Reinigungslösungen für Ihr Zuhause</h3>
+                <a href="#" class="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-soft-gold/90 transition hover:text-soft-gold">Mehr lesen<span aria-hidden="true">→</span></a>
+              </article>
+
+              <article class="reveal swipe-right flex flex-col rounded-[2rem] border border-soft-gold bg-soft-gold p-7 shadow-glow transition hover:-translate-y-1">
+                <img src="images/KOSITJE BARI.jpg" alt="Gartenpflege" class="mb-5 h-[220px] w-full rounded-[1.75rem] object-cover md:h-[240px] xl:h-[280px]" />
+                <span class="inline-flex rounded-full bg-transparent px-3 py-1 text-[14px] font-medium text-deep-navy">Kategorie</span>
+                <p class="mt-3 text-[14px] font-normal text-deep-navy">7 min Lesezeit</p>
+                <h3 class="mt-4 text-[20px] font-semibold leading-[140%] tracking-[-0.48px] text-deep-navy md:text-[24px]">Tipps für gepflegte Grünflächen das ganze Jahr</h3>
+                <a href="#" class="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-deep-navy transition hover:text-deep-navy/80">Mehr lesen<span aria-hidden="true">→</span></a>
+              </article>
+
+              <article class="reveal swipe-left flex flex-col rounded-[2rem] border border-lighter-navy bg-lighter-navy p-7 shadow-glow transition hover:-translate-y-1">
+                <img src="images/LARJEMEPRESION.jpg" alt="Außenarbeiten" class="mb-5 h-[220px] w-full rounded-[1.75rem] object-cover md:h-[240px] xl:h-[280px]" />
+                <span class="inline-flex rounded-full bg-lighter-navy px-3 py-1 text-[14px] font-medium text-muted-gray">Kategorie</span>
+                <p class="mt-3 text-[14px] font-normal text-muted-gray">7 min Lesezeit</p>
+                <h3 class="mt-4 text-[20px] font-semibold leading-[140%] tracking-[-0.48px] text-soft-gold md:text-[24px]">Hochdruckreinigung für Außenflächen und Terrassen</h3>
+                <a href="#" class="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-soft-gold/90 transition hover:text-soft-gold">Mehr lesen<span aria-hidden="true">→</span></a>
+              </article>
+            </div>
+
+            <a href="#blog" class="mt-8 inline-flex w-full items-center justify-center rounded-[8px] border border-lighter-navy bg-lighter-navy px-5 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80 lg:hidden">Mehr anzeigen</a>
+          </div>
+        </section>
+
+        <section id="allo" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
+          <div class="reveal py-10 md:py-14">
+            <div class="flex flex-wrap items-start justify-center gap-y-10 gap-x-20 sm:justify-between">
+              <div class="max-w-[760px] text-center sm:text-left">
+                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray">Warum wir</p>
+                <h2 class="mt-4 text-[36px] font-semibold leading-[120%] tracking-[-0.72px] text-soft-gold md:text-[44px] xl:text-[48px]">Verlässliche Dienstleistung in Lahr, Deutschland.</h2>
+                <p class="mt-6 max-w-[760px] text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Standort: Lahr, Deutschland. Wir arbeiten zuverlässig und pünktlich mit professionellen Werkzeugen für hochwertige und präzise Ergebnisse.</p>
+              </div>
+              <a href="#contact" class="rounded-[8px] border border-lighter-navy bg-lighter-navy px-5 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80">Kontakt</a>
+            </div>
+            <div class="mt-12 grid gap-6 lg:grid-cols-3">
+              <article class="reveal swipe-left rounded-[2rem] border border-soft-gold bg-soft-gold p-8 shadow-glow transition hover:-translate-y-1">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 12h16" /><path d="M12 4v16" /></svg>
+                </div>
+                <p class="mt-6 text-sm uppercase tracking-[0.35em] text-deep-navy">Zuverlässigkeit</p>
+                <h3 class="mt-4 text-2xl font-semibold text-deep-navy">Pünktlich und präzise</h3>
+                <p class="mt-4 text-deep-navy">Wir sind termintreu und führen jede Aufgabe mit größter Sorgfalt aus.</p>
+              </article>
+              <article class="reveal swipe-right rounded-[2rem] border border-lighter-navy bg-lighter-navy p-8 shadow-glow transition hover:-translate-y-1">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" /></svg>
+                </div>
+                <p class="mt-6 text-sm uppercase tracking-[0.35em] text-muted-gray">Ausrüstung</p>
+                <h3 class="mt-4 text-2xl font-semibold text-soft-gold">Professionelle Werkzeuge</h3>
+                <p class="mt-4 text-muted-gray">Wir arbeiten mit modernen Geräten, darunter Hilti-Abbruchwerkzeuge und Hochdruckreiniger.</p>
+              </article>
+              <article class="reveal swipe-left rounded-[2rem] border border-soft-gold bg-soft-gold p-8 shadow-glow transition hover:-translate-y-1">
+                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M12 5v14" /><path d="M5 12h14" /><path d="M5 19l2-2" /><path d="M17 7l2-2" /></svg>
+                </div>
+                <p class="mt-6 text-sm uppercase tracking-[0.35em] text-deep-navy">Preisgestaltung</p>
+                <h3 class="mt-4 text-2xl font-semibold text-deep-navy">Faire und transparente Preise</h3>
+                <p class="mt-4 text-deep-navy">Klar kalkulierte Angebote ohne versteckte Kosten und schnelle Kommunikation.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
+          <div class="reveal rounded-[2rem] bg-lighter-navy px-6 py-8 shadow-[0_25px_80px_rgba(15,23,42,0.08)] sm:px-8 lg:px-10">
+            <div class="mx-auto max-w-7xl">
+              <div class="text-center">
+                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray"></p>
+                <h2 class="mt-4 text-4xl font-semibold tracking-[-0.8px] text-soft-gold sm:text-5xl">VORHER UND NACHHER</h2>
+              </div>
+              <div class="mt-12 grid gap-4 sm:grid-cols-2">
+                <img src="images/GJEthe.jpg" alt="Reinigungsarbeiten" class="w-full rounded-[2rem] object-cover shadow-[0_25px_80px_rgba(15,23,42,0.08)] h-[360px] sm:h-[400px] md:h-[420px]" />
+                <img src="images/GJETHE (1).jpg" alt="Team bei der Arbeit" class="w-full rounded-[2rem] object-cover shadow-[0_25px_80px_rgba(15,23,42,0.08)] h-[360px] sm:h-[400px] md:h-[420px]" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="mx-auto max-w-[104rem] px-4 pb-6 sm:px-6 lg:px-8">
+          <div class="reveal rounded-[2rem] border border-lighter-navy bg-lighter-navy px-6 py-6 shadow-[0_35px_90px_rgba(15,23,42,0.08)] sm:px-8 md:px-10 lg:px-12">
+            <div class="text-center mb-6">
+              <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">Kontakt</p>
+              <h2 class="mt-4 text-4xl font-semibold tracking-[-0.8px] text-soft-gold sm:text-5xl">SIE KÖNNEN UNS KONTAKTIEREN</h2>
+              <p class="mx-auto mt-5 max-w-2xl text-base leading-7 text-muted-gray">KONTAKTMÖGLICHKEITEN: E-MAIL UND TELEFONNUMMER</p>
+              <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-soft-gold">Montag – Samstag: 08:00 – 18:00<br>Sonntag: Nach Vereinbarung</p>
+            </div>
+            <div class="grid gap-6 lg:grid-cols-3">
+              <article class="flex flex-col gap-5 rounded-[1.75rem] bg-deep-navy p-8 shadow-sm shadow-lighter-navy/30">
+                <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-soft-gold text-deep-navy shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><path d="M4 4h16v16H4z" /><path d="M8 8h8" /><path d="M8 12h8" /></svg>
+                </div>
+                <div class="space-y-3">
+                  <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">E-Mail</p>
+                  <h3 class="text-2xl font-semibold text-soft-gold">hausgartenmeister1@gmail.com</h3>
+                  <p class="text-sm leading-7 text-muted-gray">Schreiben Sie uns für Anfragen, Angebote oder Terminvereinbarungen.</p>
+                </div>
+              </article>
+              <article id="contact-middle" class="flex flex-col gap-6 rounded-[1.75rem] border border-soft-gold bg-soft-gold p-8 shadow-sm shadow-lighter-navy/30">
+                <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72 12.42 12.42 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9 10.7a16 16 0 0 0 6.3 6.3l1.05-1.05a2 2 0 0 1 2.11-.45 12.42 12.42 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                </div>
+                <div class="space-y-3">
+                  <p class="text-sm uppercase tracking-[0.35em] text-deep-navy">Telefon</p>
+                  <h3 class="text-2xl font-semibold text-deep-navy">+49 162 5793601</h3>
+                  <p class="text-sm leading-7 text-deep-navy">Rufen Sie uns an für Beratung, Termine oder ein kostenloses Angebot.</p>
+                </div>
+              </article>
+              <article class="flex flex-col gap-6 rounded-[1.75rem] bg-deep-navy p-8 shadow-sm shadow-lighter-navy/30">
+                <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-soft-gold text-deep-navy shadow-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
+                </div>
+                <div class="space-y-3">
+                  <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">Standort</p>
+                  <h3 class="text-2xl font-semibold text-soft-gold">Lahr, Deutschland</h3>
+                  <p class="text-sm leading-7 text-muted-gray">Wir sind Ihr lokaler Partner für Reinigung, Gartenpflege und Außenarbeiten.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="mx-auto max-w-[104rem] px-4 py-5 sm:px-6 lg:px-8 text-muted-gray">
+        <div class="rounded-[2rem] border border-lighter-navy bg-lighter-navy px-8 py-5 text-center shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
+          <p class="text-soft-gold font-semibold">Hausgarten Meister – Reinigungs-, Garten- und Außenarbeiten</p>
+          <p class="mt-4">Lahr, Deutschland</p>
+          <p class="mt-2">Telefon: +49 162 5793601</p>
+          <p class="mt-2">E-Mail: hausgartenmeister1@gmail.com</p>
+          <p class="mt-6 text-sm text-muted-gray">© 2026 Alle Rechte vorbehalten</p>
+        </div>
+      </footer>
+
+    </div>
+
+    <script>
+      const revealElements = document.querySelectorAll('.reveal, .section-block, .hero-text, .hero-image');
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
+      revealElements.forEach((el) => revealObserver.observe(el));
+
+      const heroSection = document.querySelector('#home');
+      const updateHeroParallax = () => {
+        if (!heroSection) return;
+        const rect = heroSection.getBoundingClientRect();
+        const offset = Math.max(Math.min(rect.top * 0.15, 36), -36);
+        heroSection.style.setProperty('--hero-parallax', `${offset}px`);
+      };
+      let frame;
+      const onScroll = () => {
+        if (frame) return;
+        frame = requestAnimationFrame(() => {
+          updateHeroParallax();
+          frame = null;
+        });
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      onScroll();
+
+      const interactiveElements = document.querySelectorAll('a, button');
+      interactiveElements.forEach((element) => {
+        element.addEventListener('pointerdown', () => element.classList.add('pressed'));
+        element.addEventListener('pointerup', () => element.classList.remove('pressed'));
+        element.addEventListener('pointerleave', () => element.classList.remove('pressed'));
+        element.addEventListener('pointercancel', () => element.classList.remove('pressed'));
+      });
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    </script>
+  </body>
+</html>
+
+
