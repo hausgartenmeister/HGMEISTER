@@ -1,661 +1,1166 @@
-<!DOCTYPE html>
-<html lang="de">
-  <head>
-  <link rel="icon" href="logohgm1337.png" type="image/png">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QQBKDJGP5B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QQBKDJGP5B');
-</script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Professionelle Reinigungs-, Gartenpflege-, Laubentfernung- und Hochdruckreinigungsdienste in Lahr, Deutschland. Zuverlässiger lokaler Service für Privat- und Geschäftskunden." />
-    <meta name="keywords" content="Reinigungsservice Lahr, Gartenpflege Lahr, Hochdruckreinigung Lahr, Außenreinigung Lahr Deutschland, Laubentfernung Lahr, Herbstreinigung Garten Lahr, Gebäudereinigung Lahr, Hausmeisterservice Lahr" />
-    <meta name="theme-color" content="#0A0F1A" />
-    <title>Reinigungs-, Garten- und Außenarbeiten in Lahr, Deutschland | Hausgarten Meister</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barnatore Diellza - Kujdesi Shëndetësor</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'deep-navy': '#0A0F1A',
-              'lighter-navy': '#161B28',
-              'soft-gold': '#E5D1B0',
-              'muted-gray': '#A0A5B1',
-              'white': '#FFFFFF',
-            },
-            fontFamily: {
-              sans: ['Playfair Display', 'serif'],
-            },
-            boxShadow: {
-              glow: '0 25px 80px rgba(15, 23, 42, 0.08)',
-            },
-            backgroundImage: {
-              aura: 'radial-gradient(circle at top, rgba(15, 23, 42, 0.05), transparent 30%), radial-gradient(circle at center, rgba(15, 23, 42, 0.03), transparent 35%), radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.02), transparent 25%)',
-            },
-          },
-        },
-      };
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#31B0A8',
+                        'primary-dark': '#0F5B5E',
+                        'light-mint': '#F2F2F2',
+                        'text-dark': '#2D3748',
+                        'text-grey': '#4A5568',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    maxWidth: {
+                        'container': '1280px',
+                    }
+                }
+            }
+        }
     </script>
     <style>
-      :root {
-        color-scheme: dark;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        background: #0A0F1A;
-        min-height: 100%;
-      }
-      @media (max-width: 767px) {
+        * {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-style: italic;
+        }
+        
         body {
-          padding-top: 80px; /* Account for fixed header height */
+            color: #4A5568;
+            line-height: 1.6;
         }
-      }
-      body::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        background-image: radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
-        background-size: 18px 18px;
-        opacity: 0.22;
-        z-index: -1;
-      }
-      #home {
-        position: relative;
-        overflow: hidden;
-        margin-top: 2rem;
-      }
-      #home::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        background-image: radial-gradient(circle at 22% 12%, rgba(229,209,176,0.12), transparent 25%),
-                          radial-gradient(circle at 82% 10%, rgba(160,165,177,0.08), transparent 18%),
-                          radial-gradient(circle at 50% 80%, rgba(255,255,255,0.04), transparent 20%);
-        opacity: 0.92;
-        transform: translate3d(var(--hero-parallax, 0px), 0, 0);
-        transition: transform 0.12s ease-out;
-        z-index: 0;
-      }
-      @media (max-width: 1023px) {
-        #home::before {
-          display: none;
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: #2D3748;
+            font-weight: 700;
         }
-      }
-      #home > .mx-auto {
-        position: relative;
-        z-index: 1;
-      }
-      .reveal {
-        opacity: 0;
-        transform: translateY(1.25rem) scale(0.98);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-        will-change: opacity, transform;
-      }
-      .reveal.visible {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-      .reveal-delay-small {
-        transition-delay: 0.12s;
-      }
-      .reveal-delay-medium {
-        transition-delay: 0.22s;
-      }
-      .reveal-delay-large {
-        transition-delay: 0.32s;
-      }
-      .animate-left {
-        opacity: 0;
-        transform: translateX(-50px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-        will-change: opacity, transform;
-      }
-      .animate-left.visible {
-        opacity: 1;
-        transform: translateX(0);
-      }
-      .animate-right {
-        opacity: 0;
-        transform: translateX(50px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-        will-change: opacity, transform;
-      }
-      .animate-right.visible {
-        opacity: 1;
-        transform: translateX(0);
-      }
-      a,
-      button {
-        transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-      }
-      a:hover,
-      button:hover {
-        transform: translateY(-1px) scale(1.01);
-      }
-      a:active,
-      button:active {
-        transform: translateY(0) scale(0.98);
-      }
-      .pressed {
-        transform: translateY(1px) scale(0.98) !important;
-      }
-      a,
-      button {
-        cursor: pointer;
-      }
-      .hover-soft-shadow:hover {
-        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
-      }
-      .card-hover {
-        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-6px);
-        border-color: rgba(229, 209, 176, 0.24);
-        box-shadow: 0 30px 75px rgba(15, 23, 42, 0.12);
-      }
-      .hero-text,
-      .hero-image,
-      .section-block {
-        opacity: 0;
-        transform: translateY(1.5rem);
-        transition: opacity 0.9s ease, transform 0.9s ease;
-      }
-      .hero-text.visible,
-      .hero-image.visible,
-      .section-block.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .swipe-left,
-      .swipe-right {
-        opacity: 0;
-        transform: translateX(0) translateY(1.5rem);
-        transition: opacity 2.4s ease, transform 2.4s ease;
-      }
-      .swipe-left {
-        transform: translateX(-2.25rem) translateY(1.5rem);
-      }
-      .swipe-right {
-        transform: translateX(2.25rem) translateY(1.5rem);
-      }
-      .swipe-left.visible,
-      .swipe-right.visible {
-        opacity: 1;
-        transform: translateX(0) translateY(0);
-      }
-      .hero-text {
-        animation: slideInLeft 1s ease-out 0.2s both;
-      }
-      .hero-image {
-        animation: slideInRight 1s ease-out 0.4s both;
-      }
-      @keyframes slideInLeft {
-        from { transform: translateX(-50px); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-      }
-      @keyframes slideInRight {
-        from { transform: translateX(50px); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-      }
-      details summary::-webkit-details-marker {
-        display: none;
-      }
-      details summary {
-        list-style: none;
-      }
-      /* Mobile Sticky Header Styles */
-      @media (max-width: 767px) {
-        #main-header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          z-index: 50;
-          border-radius: 0 0 33px 33px;
+        
+        .btn-primary {
+            background-color: #31B0A8;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 0;
+            transition: all 0.3s ease;
         }
-        #main-header.header--hidden {
-          transform: translateY(-100%);
+        
+        .btn-primary:hover {
+            background-color: #0F5B5E;
+            transform: translateY(-2px);
         }
-        #main-header.header--scrolled {
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-          background-color: rgba(22, 27, 40, 0.98);
+        
+        .btn-outline {
+            border: 2px solid #31B0A8;
+            color: #31B0A8;
+            padding: 0.75rem 2rem;
+            border-radius: 0;
+            transition: all 0.3s ease;
+            background: transparent;
         }
-      }
-      details[open] summary .faq-icon {
-        transform: rotate(180deg);
-      }
-      .faq-icon {
-        transition: transform 0.3s ease;
-      }
+        
+        .btn-outline:hover {
+            background-color: #31B0A8;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .btn-white {
+            background-color: white;
+            color: #31B0A8;
+            padding: 0.75rem 2rem;
+            border-radius: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-white:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-2px);
+        }
+        
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        
+        .container-custom {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+        
+        /* Navbar shadow on scroll */
+        .navbar-scrolled {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Accordion styles */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 2000px;
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+        
+        /* Floating avatars animation */
+        .avatar-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Decorative dotted-grid motif */
+        .dot-pattern {
+            background-image: radial-gradient(circle, #31B0A8 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+        .dot-pattern-light {
+            background-image: radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
     </style>
-  </head>
-  <body class="text-muted-gray antialiased m-0 p-0">
-    <div class="relative overflow-hidden">
-      <header id="main-header" class="border-b border-lighter-navy bg-lighter-navy/90 backdrop-blur-xl transition-all duration-300">
-        <div class="mx-auto flex max-w-[104rem] items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
-          <a href="#home" class="inline-flex items-center">
-            <span class="font-semibold text-soft-gold tracking-[0.18em] uppercase">HAUS-GARTEN</span>
-          </a>
-          <nav class="hidden items-center gap-8 text-sm font-medium text-muted-gray md:flex">
-            <a href="#home" class="transition hover:text-soft-gold">Startseite</a>
-            <a href="#core" class="transition hover:text-soft-gold">Über uns</a>
-            <a href="#features" class="transition hover:text-soft-gold">Leistungen</a>
-            <a href="#allo" class="transition hover:text-soft-gold">Warum wir</a>
-          </nav>
-          <div class="flex items-center gap-3">
-            <a href="#contact" class="hidden rounded-2xl border border-soft-gold bg-soft-gold px-4 py-2 text-sm font-semibold text-deep-navy transition hover:bg-soft-gold/90 md:inline-flex">Kontakt</a>
-            <button id="mobile-menu-button" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-lighter-navy text-soft-gold hover:bg-lighter-navy/80 transition">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav id="main-nav" class="bg-white z-50 fixed top-0 left-0 right-0 shadow-sm transition-transform duration-300">
+        <div class="dot-pattern absolute top-0 h-20 right-0 w-32 opacity-30 pointer-events-none"></div>
+        <div class="dot-pattern absolute top-0 h-20 left-1/3 w-20 opacity-20 pointer-events-none hidden lg:block"></div>
+        <div class="container-custom relative">
+            <div class="flex items-center h-20 w-full">
+                <div class="flex items-center gap-2 mr-10">
+                    <div class="w-16 h-16 flex items-center justify-center">
+                        <img src="images/unnamed (1).jpg" alt="Barnatore Diellza Logo" class="w-full h-full object-contain">
+                    </div>
+                    <span class="font-bold text-xl" style="color:#00b050;">DIELLZA</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8 flex-1 justify-center">
+                    <a href="index.html" class="text-text-grey hover:text-primary">HOME</a>
+                    <div class="relative" id="pikat-dropdown">
+                        <button onclick="togglePikat()" class="flex items-center gap-1.5 px-4 py-2 bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-all shadow-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Pikat Tona
+                            <svg class="w-3.5 h-3.5 transition-transform" id="pikat-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div id="pikat-menu" class="hidden absolute top-full left-0 mt-2 w-44 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden z-50">
+                            <a href="ambulanca.html" class="flex items-center gap-3 px-4 py-3 text-text-grey hover:bg-primary hover:text-white transition-colors text-sm font-medium">
+                                <span class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>Ambulanca
+                            </a>
+                            <a href="stacioni.html" class="flex items-center gap-3 px-4 py-3 text-text-grey hover:bg-primary hover:text-white transition-colors text-sm font-medium">
+                                <span class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>Stacioni
+                            </a>
+                            <a href="ordinanca.html" class="flex items-center gap-3 px-4 py-3 text-text-grey hover:bg-primary hover:text-white transition-colors text-sm font-medium">
+                                <span class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>Ordinanca
+                            </a>
+                            <a href="spitali.html" class="flex items-center gap-3 px-4 py-3 text-text-grey hover:bg-primary hover:text-white transition-colors text-sm font-medium">
+                                <span class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>Spitali
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block ml-auto">
+                    <a href="#contact" class="btn-primary">Na Kontaktoni</a>
+                </div>
+                <div class="md:hidden flex items-center gap-3 ml-auto">
+                    <a href="index.html" class="text-text-dark font-semibold text-sm">HOME</a>
+                    <div class="relative" id="pikat-dropdown-mobile">
+                        <button onclick="togglePikatMobile()" class="flex items-center gap-1.5 px-3 py-2 bg-primary text-white text-xs font-semibold hover:bg-primary-dark transition-all">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Pikat Tona
+                            <svg class="w-3 h-3 transition-transform" id="pikat-arrow-mobile" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div id="pikat-menu-mobile" class="hidden absolute top-full right-0 mt-2 w-44 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden z-50">
+                            <a href="ambulanca.html" class="flex items-center gap-3 px-4 py-3 text-text-grey hover:bg-primary hover:text-white transition-colors text-sm font-medium"><span class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>Ambulanca</a>
+                            <a href="stacioni.html" class="flex items-center gap-3 px-4 py-3 text-text-grey hover:bg-primary hover:text-white transition-colors text-sm font-medium"><span class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>Stacioni</a>
+                            <a href="ordinanca.html" class="flex items-center gap-3 px-4 py-3 text-text-grey hover:bg-primary hover:text-white transition-colors text-sm font-medium"><span class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>Ordinanca</a>
+                            <a href="spitali.html" class="flex items-center gap-3 px-4 py-3 text-text-grey hover:bg-primary hover:text-white transition-colors text-sm font-medium"><span class="w-2 h-2 rounded-full bg-primary flex-shrink-0"></span>Spitali</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-lighter-navy/95 backdrop-blur-xl border-t border-lighter-navy">
-          <div class="px-4 py-6 space-y-4">
-            <a href="#home" class="block text-muted-gray hover:text-soft-gold transition py-2">Startseite</a>
-            <a href="#core" class="block text-muted-gray hover:text-soft-gold transition py-2">Über uns</a>
-            <a href="#features" class="block text-muted-gray hover:text-soft-gold transition py-2">Leistungen</a>
-            <a href="#allo" class="block text-muted-gray hover:text-soft-gold transition py-2">Warum wir</a>
-            <a href="#contact" class="block bg-soft-gold text-deep-navy px-4 py-2 rounded-2xl text-center font-semibold hover:bg-soft-gold/80 transition">Kontakt</a>
-          </div>
+    </nav>
+
+    <!-- Section 2: Hero Section -->
+    <div class="h-20"></div>
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Hero: tall vertical strip on left edge -->
+        <div class="dot-pattern absolute top-1/2 -translate-y-1/2 left-6 w-16 h-80 opacity-30 z-10 hidden lg:block"></div>
+        <!-- Background Image with Gradient Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1920&q=80" 
+                 alt="Medical team" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/85 to-primary/20"></div>
         </div>
-      </header>
-
-      <section id="home" class="relative overflow-hidden bg-deep-navy py-6 sm:py-10">
-        <div class="mx-auto grid max-w-[104rem] gap-10 px-4 sm:px-6 lg:px-8 lg:grid-cols-[0.75fr_0.9fr] lg:items-stretch">
-          <div class="hidden lg:block relative h-full overflow-hidden rounded-[2.5rem] border border-lighter-navy bg-lighter-navy shadow-glow order-1 lg:order-2 hero-image">
-            <div class="absolute -right-8 top-8 h-44 w-44 rounded-full bg-accent-green/30 blur-3xl"></div>
-            <div class="absolute -left-8 bottom-10 h-36 w-36 rounded-full bg-accent-green/15 blur-3xl"></div>
-            <img src="images/FIRSTFOTO.jpg" alt="Hero image" class="relative h-full w-full rounded-[2.5rem] object-cover shadow-[0_35px_100px_rgba(15,23,42,0.12)]" />
-          </div>
-          <div class="relative overflow-hidden rounded-[2.5rem] border border-lighter-navy bg-lighter-navy p-8 shadow-glow sm:p-10 order-2 lg:order-1 text-center hero-text">
-            <h1 class="mt-8 text-5xl font-semibold tracking-[-0.75px] text-soft-gold sm:text-6xl lg:text-7xl">HAUS GARTEN MEISTER</h1>
-            <p class="mt-8 max-w-2xl text-base leading-8 text-muted-gray sm:text-xl mx-auto">Professionelle Reinigungs-, Garten- und Außenarbeiten in Lahr, Deutschland</p>
-            <img src="images/FIRSTFOTO.jpg" alt="Hero image" class="mt-8 mx-auto block w-full max-w-[34rem] rounded-[2rem] object-cover shadow-[0_35px_100px_rgba(15,23,42,0.12)] lg:hidden" />
-            <p class="mt-6 max-w-2xl text-base leading-8 text-muted-gray sm:text-xl mx-auto">Hausgarten Meister bietet professionelle Reinigungs-, Haus- und Gartenservices in Lahr an.</p>
-            <p class="mt-6 max-w-2xl text-base leading-8 text-muted-gray sm:text-xl mx-auto">Wir sind spezialisiert auf komplette Haushaltsreinigung, Innenreinigung, Büroreinigung, Fensterreinigung, Garagenreinigung sowie Gartenpflege und Außenarbeiten.</p>
-            <p class="mt-6 max-w-2xl text-base leading-8 text-muted-gray sm:text-xl mx-auto">Unsere Dienstleistungen umfassen auch Hochdruckreinigung, Fassadenreinigung, Steinreinigung und leichte Abbrucharbeiten.</p>
-            <p class="mt-6 text-sm uppercase tracking-[0.35em] text-soft-gold">FULL SERVICE. SAUBER. ZUVERLÄSSIG.</p>
-            <p class="mt-3 text-sm text-muted-gray">Fordern Sie jetzt Ihr kostenloses Angebot in Lahr an.</p>
-            <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <a href="#contact" class="inline-flex items-center justify-center rounded-[1.5rem] bg-soft-gold px-6 py-3 text-sm font-semibold text-deep-navy shadow-lg shadow-accent-green/10 transition hover:bg-soft-gold/80">Kontakt</a>
-              <a href="#features" class="inline-flex items-center justify-center rounded-[1.5rem] border border-lighter-navy bg-lighter-navy px-6 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80">Unsere Leistungen</a>
+        
+        <div class="container-custom relative z-10 w-full">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="font-bold text-primary mb-8" style="line-height: 1.15;">
+                    <span class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl">BARNATORE DIELLZA</span><span class="text-xl sm:text-2xl md:text-3xl" style="vertical-align: middle;"> G.D</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-text-dark mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+                    Barnatore Diellza ofron shërbime të integruara shëndetësore për të gjithë familjen tuaj. Partneri juaj i besuar për kujdes cilësor.
+                </p>
+                <div class="flex flex-wrap gap-6 justify-center">
+                    <a href="#contact" class="px-8 py-4 bg-primary text-white font-semibold hover:bg-primary-dark transition-all transform hover:scale-105 shadow-lg text-lg">Fillo Tani</a>
+                    <a href="#about" class="px-8 py-4 border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all transform hover:scale-105 shadow-md text-lg">Mëso Më Shumë</a>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <section id="core" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8 overflow-x-hidden">
-          <div class="reveal py-10 md:py-14">
-            <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-              <div class="space-y-8 text-center sm:text-left order-1 lg:order-2">
-                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray">Über uns</p>
-                <h2 class="text-2xl font-semibold leading-[110%] tracking-[-0.96px] text-soft-gold sm:text-[44px] xl:text-[44px]">Wir sind ein erfahrenes Dienstleistungsunternehmen aus Lahr.</h2>
-                <p class="max-w-xl text-[16px] leading-[150%] sm:text-base sm:leading-6 text-muted-gray">Unser Unternehmen ist lokal in Lahr ansässig und spezialisiert auf komplette Reinigungs- und Gartenservices für Häuser, Wohnungen und Außenbereiche.</p>
-                <p class="max-w-xl text-[16px] leading-[150%] sm:text-base sm:leading-6 text-muted-gray">Wir bieten Full-Service-Lösungen für private Haushalte und Gewerbekunden – von Innenreinigung bis Gartenpflege und Außenreinigung.</p>
-                <p class="max-w-xl text-[16px] leading-[150%] sm:text-base sm:leading-6 text-muted-gray">Mit moderner Ausrüstung und effizienten Methoden sorgen wir für gründliche und zuverlässige Ergebnisse.</p>
-                <div class="grid gap-4 sm:grid-cols-2">
-                  <div class="rounded-[1.75rem] border border-soft-gold bg-soft-gold p-6">
-                    <p class="text-sm uppercase tracking-[0.35em] text-deep-navy">Qualität</p>
-                    <h3 class="mt-4 text-xl font-semibold text-deep-navy">Höchste Qualität bei jeder Hausreinigung, Gartenarbeit und Außenreinigung in Lahr.</h3>
-                    <p class="mt-3 text-deep-navy">Wir arbeiten präzise, termingerecht und mit hochwertigen Materialien für nachhaltige Ergebnisse.</p>
-                  </div>
-                  <div class="rounded-[1.75rem] border border-lighter-navy bg-lighter-navy p-6">
-                    <p class="text-sm uppercase tracking-[0.35em] text-soft-gold">Projekte</p>
-                    <h3 class="mt-4 text-xl font-semibold text-soft-gold">Wir betreuen kleine private Haushalte sowie große gewerbliche Objekte in Lahr und Umgebung.</h3>
-                    <p class="mt-3 text-muted-gray">Ob Einfamilienhaus oder Gewerbeobjekt – wir übernehmen Aufgaben jeder Größe mit größter Sorgfalt.</p>
-                  </div>
+    <!-- Section 3: Centered Intro -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-6">
+                    Barnatore Diellza ofron zgjidhje të integruara shëndetësore për të gjithë komunitetin tonë
+                </h2>
+                <p class="text-text-grey text-lg mb-8">
+                    Me vite përvojë në kujdesin shëndetësor, ofrojmë shërbime të plota që garantojnë shëndetin dhe mirëqenien tuaj.
+                </p>
+                <a href="#contact" class="btn-primary inline-block">Zbulo Më Shumë</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: About Highlight -->
+    <section id="about" class="section-padding bg-light-mint">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Left Column - Circular Image -->
+                <div class="flex justify-center">
+                    <div class="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=600&q=80" 
+                             alt="Scientist looking into microscope" 
+                             class="w-full h-full object-cover">
+                    </div>
                 </div>
-                <div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
-                  <a href="#contact" class="inline-flex items-center justify-center rounded-2xl bg-soft-gold px-6 py-3 text-sm font-semibold text-deep-navy transition hover:bg-soft-gold/90">Jetzt anfragen</a>
-                  <a href="#allo" class="inline-flex items-center justify-center rounded-2xl border border-lighter-navy bg-lighter-navy px-6 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80">Mehr erfahren</a>
+                
+                <!-- Right Column -->
+                <div>
+                    <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">25 Vite Përvojë &middot; Që nga viti 2001</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-6">
+                        25 Vite Inovacion në Kujdesin Shëndetësor
+                    </h2>
+                    <p class="text-text-grey text-lg mb-6">
+                        Që nga themelimi në vitin <strong>2001</strong>, Barnatorja Diellza ka shërbyer komunitetin për mbi <strong>25 vite</strong>, duke kombinuar teknologjinë moderne me një ekip mjekësh dhe farmacistësh të dedikuar. Përvoja jonë e gjatë është garanci që shëndeti juaj është në duar të sigurta.
+                    </p>
+                    <p class="text-text-grey mb-6">
+                        Nga kontrollet e para deri te trajtimi i specializuar, çerek shekulli në shërbim të pacientëve na ka mësuar të ofrojmë kujdes të personalizuar dhe profesional për çdo familje.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all">
+                        Lexo Më Shumë
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
                 </div>
-              </div>
-              <div class="relative order-2 lg:order-1">
-                <img src="images/PastrimAvull.jpg" alt="Professionelle Mitarbeiter bei der Arbeit" class="w-full max-w-5xl mx-auto rounded-[2rem] border border-lighter-navy object-cover shadow-[0_25px_80px_rgba(15,23,42,0.08)]" />
-              </div>
             </div>
-          </div>
-        </section>
+        </div>
+    </section>
 
-      <main class="m-0 p-0">
-        <section id="features" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
-          <div class="reveal py-10 md:py-14">
-            <div class="reveal swipe-right text-center mb-12">
-              <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">Leistungen</p>
-              <h2 class="mt-4 text-2xl font-semibold tracking-[-0.72px] text-soft-gold md:text-3xl xl:text-4xl">Komplette Reinigung, Hausservice und Gartenpflege in Lahr aus einer Hand.</h2>
-              <p class="mt-6 max-w-2xl mx-auto text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Wir sorgen dafür, dass Ihr Zuhause oder Ihr Unternehmen sauber, frisch und hygienisch bleibt.</p>
+    <!-- Section: Lokacionet Tona (Pikat e Barnatores) -->
+    <section id="locations" class="section-padding bg-white relative overflow-hidden">
+        <div class="dot-pattern absolute top-10 right-6 w-24 h-24 opacity-25"></div>
+        <div class="dot-pattern absolute bottom-10 left-6 w-20 h-20 opacity-20"></div>
+        <div class="container-custom relative">
+            <!-- Header -->
+            <div class="text-center mb-14 max-w-3xl mx-auto">
+                <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Pikat Tona</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">Lokacionet e Barnatores Diellza</h2>
+                <p class="text-text-grey text-lg">
+                    Barnatorja Diellza është e pranishme në disa pika strategjike për të qenë sa më afër pacientëve tanë. Çdo lokacion ofron shërbim profesional, barna origjinale dhe këshillim farmaceutik.
+                </p>
             </div>
-            <div class="grid gap-6 lg:grid-cols-3">
-              <div class="reveal rounded-[2rem] border border-lighter-navy bg-lighter-navy p-6 shadow-glow transition hover:-translate-y-2 hover:border-lighter-navy">
-                <div class="flex h-full flex-col justify-between gap-4">
-                  <div class="space-y-4">
-                    <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">REINIGUNGSDIENSTE (HOUSE CLEANING)</p>
-                    <h2 class="text-2xl font-semibold text-soft-gold">Hausreinigung, Wohnungsreinigung, Büroreinigung, Fensterreinigung, Einzugs- und Auszugsreinigung sowie Tiefenreinigung von Innenräumen in Lahr.</h2>
-                    <p class="text-muted-gray">Hausreinigung (regelmäßig und Tiefenreinigung), Büroreinigung, Einzugs- / Auszugsreinigung, Fensterreinigung sowie Boden- und Oberflächenreinigung.</p>
-                  </div>
-                  <img src="images/quality_restoration_20260418222950628.JPEG" alt="Reinigungsdienst" class="mt-4 h-56 w-full rounded-[1.75rem] object-cover" />
+
+            <!-- Main locations grid: Ambulanca, Spitali, Stacioni -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Ambulanca -->
+                <a href="ambulanca.html" class="group bg-light-mint hover:bg-primary transition-colors duration-300 p-8 flex flex-col">
+                    <div class="w-14 h-14 bg-primary group-hover:bg-white flex items-center justify-center mb-5 transition-colors">
+                        <svg class="w-7 h-7 text-white group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-text-dark group-hover:text-white mb-3 transition-colors">Ambulanca</h3>
+                    <p class="text-text-grey group-hover:text-white/90 mb-5 flex-1 transition-colors">
+                        E vendosur pranë ambulancës familjare, kjo pikë ofron qasje të shpejtë te barnat e përditshme, recetat dhe këshillat farmaceutike për pacientët që dalin nga vizita mjekësore.
+                    </p>
+                    <span class="inline-flex items-center gap-2 text-primary group-hover:text-white font-semibold transition-colors">
+                        Vizito Pikën
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </span>
+                </a>
+
+                <!-- Spitali -->
+                <a href="spitali.html" class="group bg-light-mint hover:bg-primary transition-colors duration-300 p-8 flex flex-col">
+                    <div class="w-14 h-14 bg-primary group-hover:bg-white flex items-center justify-center mb-5 transition-colors">
+                        <svg class="w-7 h-7 text-white group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-text-dark group-hover:text-white mb-3 transition-colors">Spitali</h3>
+                    <p class="text-text-grey group-hover:text-white/90 mb-5 flex-1 transition-colors">
+                        Pika jonë pranë spitalit është e specializuar për barnat e terapive intensive, antibiotikët dhe medikamentet që kërkohen nga pacientët e shtruar dhe familjarët e tyre.
+                    </p>
+                    <span class="inline-flex items-center gap-2 text-primary group-hover:text-white font-semibold transition-colors">
+                        Vizito Pikën
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </span>
+                </a>
+
+                <!-- Stacioni -->
+                <a href="stacioni.html" class="group bg-light-mint hover:bg-primary transition-colors duration-300 p-8 flex flex-col">
+                    <div class="w-14 h-14 bg-primary group-hover:bg-white flex items-center justify-center mb-5 transition-colors">
+                        <svg class="w-7 h-7 text-white group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-text-dark group-hover:text-white mb-3 transition-colors">Stacioni</h3>
+                    <p class="text-text-grey group-hover:text-white/90 mb-5 flex-1 transition-colors">
+                        E pozicionuar afër stacionit qendror, kjo pikë është ideale për qytetarët në lëvizje – me orar të zgjeruar dhe një gamë të gjerë produktesh të kujdesit shëndetësor.
+                    </p>
+                    <span class="inline-flex items-center gap-2 text-primary group-hover:text-white font-semibold transition-colors">
+                        Vizito Pikën
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </span>
+                </a>
+            </div>
+
+            <!-- Ordinanca - smaller highlight card -->
+            <a href="ordinanca.html" class="group block bg-primary-dark hover:bg-primary transition-colors duration-300 p-6 md:p-8">
+                <div class="flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
+                    <div class="w-14 h-14 bg-white/15 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Ordinanca</h3>
+                        <p class="text-white/85 text-sm md:text-base">
+                            Pika jonë pranë ordinancës mjekësore – një pikë e vogël por e rëndësishme që plotëson nevojat e pacientëve të vizituar në klinikë me shërbim të shpejtë dhe të personalizuar.
+                        </p>
+                    </div>
+                    <span class="inline-flex items-center gap-2 text-white font-semibold whitespace-nowrap">
+                        Mëso Më Shumë
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </span>
                 </div>
-              </div>
-              <div class="space-y-6 lg:col-span-2">
-                <div class="reveal rounded-[2rem] border border-lighter-navy bg-lighter-navy p-6 shadow-glow transition hover:-translate-y-2 hover:border-lighter-navy">
-                  <img src="images/Garazhda.jpg" alt="Gartenpflege" class="h-56 w-full rounded-[1.75rem] object-cover" />
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section-padding bg-primary">
+        <div class="container-custom">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">200+</div>
+                    <div class="text-lg font-medium opacity-90">Shtretër</div>
                 </div>
-                <div class="grid gap-6 lg:grid-cols-3">
-                  <div class="reveal rounded-[2rem] border border-soft-gold bg-soft-gold p-6 shadow-glow transition hover:-translate-y-2 hover:border-soft-gold">
-                    <p class="text-sm uppercase tracking-[0.35em] text-deep-navy">AUSSENREINIGUNG</p>
-                    <h3 class="mt-4 text-xl font-semibold text-deep-navy">Hochdruckreinigung von Terrassen, Einfahrten, Wegen, Fassaden und stark verschmutzten Außenflächen.</h3>
-                    <p class="mt-3 text-deep-navy">Einfahrten, Wände und Terrassen erhalten eine gründliche Reinigung.</p>
-                  </div>
-                  <div class="reveal rounded-[2rem] border border-lighter-navy bg-lighter-navy p-6 shadow-glow transition hover:-translate-y-2 hover:border-lighter-navy">
-                    <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">STEIN- & FLÄCHENREINIGUNG</p>
-                    <h3 class="mt-4 text-xl font-semibold text-soft-gold">Professionelle Reinigung von Pflastersteinen, Gehwegen und Außenflächen für ein sauberes Erscheinungsbild.</h3>
-                    <p class="mt-3 text-muted-gray">Fachgerechtes Reinigen und Erneuern von Steinflächen und Außenbereichen.</p>
-                  </div>
-                  <div class="reveal rounded-[2rem] border border-soft-gold bg-soft-gold p-6 shadow-glow transition hover:-translate-y-2 hover:border-soft-gold">
-                    <p class="text-sm uppercase tracking-[0.35em] text-deep-navy">ABBRUCHARBEITEN</p>
-                    <h3 class="mt-4 text-xl font-semibold text-deep-navy">Kleine Abbrucharbeiten und Entfernung alter Strukturen mit professionellen Werkzeugen.</h3>
-                    <p class="mt-3 text-deep-navy">Professioneller Abbruch mit Hilti-Werkzeugen und Außenflächen-Vorbereitung.</p>
-                  </div>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">50+</div>
+                    <div class="text-lg font-medium opacity-90">Mjekë</div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="galerie" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
-          <div class="reveal py-10 md:py-14">
-            <div class="text-center mb-10">
-              <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">Galerie</p>
-              <h2 class="mt-4 text-[36px] font-semibold tracking-[-0.72px] text-soft-gold md:text-[44px] xl:text-[48px]">Unsere Arbeiten in Lahr</h2>
-              <p class="mt-6 max-w-2xl mx-auto text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Beispiele unserer Hausreinigung, Garagenreinigung, Gartenpflege und Außenarbeiten in Lahr und Umgebung.</p>
-            </div>
-            <div class="grid gap-6 sm:grid-cols-2">
-              <div class="reveal swipe-left overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-56 sm:h-[450px] lg:h-[350px]">
-                <img src="images/IMG_1664.JPG" alt="Galerie Bild 1" class="h-full w-full object-fill" />
-              </div>
-              <div class="reveal swipe-right overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-56 sm:h-[450px] lg:h-[350px]">
-                <img src="images/A7.jpg" alt="Galerie Bild 2" class="h-full w-full object-fill" />
-              </div>
-              <div class="reveal swipe-left overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-56 sm:h-[450px] lg:h-[350px]">
-                <img src="images/A5.jpeg" alt="Galerie Bild 3" class="h-full w-full object-fill" />
-              </div>
-              <div class="reveal swipe-right overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-56 sm:h-[450px] lg:h-[350px]">
-                <img src="images/A1.jpg" alt="Galerie Bild 4" class="h-full w-full object-fill" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="blog" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
-          <div class="reveal py-10 md:py-14 lg:py-16">
-            <div class="flex flex-wrap items-start justify-between gap-y-12 gap-x-20">
-              <div class="max-w-[760px] text-center sm:text-left">
-                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray">Aktuelles</p>
-                <h2 class="mt-4 text-[36px] font-semibold leading-[120%] tracking-[-0.72px] text-soft-gold md:text-[44px] xl:text-[48px]">Tipps & Projekte aus Lahr</h2>
-                <p class="mt-6 mb-[-14px] max-w-[760px] text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Erfahren Sie mehr über unsere aktuellen Projekte, Tipps zur Pflege Ihrer Außenanlagen und saisonale Serviceangebote in Lahr.</p>
-              </div>
-              <a href="#blog" class="hidden rounded-[8px] border border-lighter-navy bg-lighter-navy px-5 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80 lg:inline-flex">Mehr anzeigen</a>
-            </div>
-
-            <div class="mt-12 grid gap-y-12 gap-x-8 md:grid-cols-2 xl:grid-cols-3">
-              <article class="reveal swipe-left flex flex-col rounded-[2rem] border border-lighter-navy bg-lighter-navy p-7 shadow-glow transition hover:-translate-y-1">
-                <img src="images/THYRJE ME HILT.jpg" alt="Reinigungsdienst" class="mb-5 h-[220px] w-full rounded-[1.75rem] object-cover md:h-[240px] xl:h-[280px]" />
-                <span class="inline-flex rounded-full bg-lighter-navy px-3 py-1 text-[14px] font-medium text-muted-gray">Kategorie</span>
-                <p class="mt-3 text-[14px] font-normal text-muted-gray">7 min Lesezeit</p>
-                <h3 class="mt-4 text-[20px] font-semibold leading-[140%] tracking-[-0.48px] text-soft-gold md:text-[24px]">Effektive Haus- und Wohnungsreinigung (Innen & Tiefenreinigung)</h3>
-                <a href="#" class="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-soft-gold/90 transition hover:text-soft-gold">Mehr lesen<span aria-hidden="true">→</span></a>
-              </article>
-
-              <article class="reveal swipe-right flex flex-col rounded-[2rem] border border-soft-gold bg-soft-gold p-7 shadow-glow transition hover:-translate-y-1">
-                <img src="images/KOSITJE BARI.jpg" alt="Gartenpflege" class="mb-5 h-[220px] w-full rounded-[1.75rem] object-cover md:h-[240px] xl:h-[280px]" />
-                <span class="inline-flex rounded-full bg-transparent px-3 py-1 text-[14px] font-medium text-deep-navy">Kategorie</span>
-                <p class="mt-3 text-[14px] font-normal text-deep-navy">7 min Lesezeit</p>
-                <h3 class="mt-4 text-[20px] font-semibold leading-[140%] tracking-[-0.48px] text-deep-navy md:text-[24px]">Garagenreinigung bei starker Verschmutzung</h3>
-                <a href="#" class="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-deep-navy transition hover:text-deep-navy/80">Mehr lesen<span aria-hidden="true">→</span></a>
-              </article>
-
-              <article class="reveal swipe-left flex flex-col rounded-[2rem] border border-lighter-navy bg-lighter-navy p-7 shadow-glow transition hover:-translate-y-1">
-                <img src="images/LARJEMEPRESION.jpg" alt="Außenarbeiten" class="mb-5 h-[220px] w-full rounded-[1.75rem] object-cover md:h-[240px] xl:h-[280px]" />
-                <span class="inline-flex rounded-full bg-lighter-navy px-3 py-1 text-[14px] font-medium text-muted-gray">Kategorie</span>
-                <p class="mt-3 text-[14px] font-normal text-muted-gray">7 min Lesezeit</p>
-                <h3 class="mt-4 text-[20px] font-semibold leading-[140%] tracking-[-0.48px] text-soft-gold md:text-[24px]">Gartenpflege und saisonale Außenarbeiten in Lahr</h3>
-                <a href="#" class="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-soft-gold/90 transition hover:text-soft-gold">Mehr lesen<span aria-hidden="true">→</span></a>
-              </article>
-            </div>
-
-            <a href="#blog" class="mt-8 inline-flex w-full items-center justify-center rounded-[8px] border border-lighter-navy bg-lighter-navy px-5 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80 lg:hidden">Mehr anzeigen</a>
-          </div>
-        </section>
-
-        <section id="allo" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
-          <div class="reveal py-10 md:py-14">
-            <div class="flex flex-wrap items-start justify-center gap-y-10 gap-x-20 sm:justify-between">
-              <div class="max-w-[760px] text-center sm:text-left">
-                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray">Warum wir</p>
-                <h2 class="mt-4 text-[36px] font-semibold leading-[120%] tracking-[-0.72px] text-soft-gold md:text-[44px] xl:text-[48px]">Ihr zuverlässiger Partner in Lahr</h2>
-                <p class="mt-6 max-w-[760px] text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Standort: Lahr, Deutschland. Wir arbeiten zuverlässig und pünktlich mit professionellen Werkzeugen für hochwertige und präzise Ergebnisse.</p>
-              </div>
-              <a href="#contact" class="rounded-[8px] border border-lighter-navy bg-lighter-navy px-5 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80">Kontakt</a>
-            </div>
-            <div class="mt-12 grid gap-6 lg:grid-cols-3">
-              <article class="reveal swipe-left rounded-[2rem] border border-soft-gold bg-soft-gold p-8 shadow-glow transition hover:-translate-y-1">
-                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 12h16" /><path d="M12 4v16" /></svg>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">10000+</div>
+                    <div class="text-lg font-medium opacity-90">Pacientë Vjetorë</div>
                 </div>
-                <p class="mt-6 text-sm uppercase tracking-[0.35em] text-deep-navy">ZUVERLÄSSIGKEIT</p>
-                <h3 class="mt-4 text-2xl font-semibold text-deep-navy">Pünktliche und sorgfältige Ausführung aller Arbeiten in Lahr.</h3>
-                <p class="mt-4 text-deep-navy">Wir sind termintreu und führen jede Aufgabe mit größter Sorgfalt aus.</p>
-              </article>
-              <article class="reveal swipe-right rounded-[2rem] border border-lighter-navy bg-lighter-navy p-8 shadow-glow transition hover:-translate-y-1">
-                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" /></svg>
+                <div>
+                    <div class="text-4xl md:text-5xl font-bold mb-2">25+</div>
+                    <div class="text-lg font-medium opacity-90">Vite Përvojë (që nga 2001)</div>
                 </div>
-                <p class="mt-6 text-sm uppercase tracking-[0.35em] text-muted-gray">MODERNE AUSRÜSTUNG</p>
-                <h3 class="mt-4 text-2xl font-semibold text-soft-gold">Hochdruckreiniger, professionelle Reinigungsgeräte und Gartenwerkzeuge.</h3>
-                <p class="mt-4 text-muted-gray">Wir arbeiten mit modernen Geräten, darunter Hilti-Abbruchwerkzeuge und Hochdruckreiniger.</p>
-              </article>
-              <article class="reveal swipe-left rounded-[2rem] border border-soft-gold bg-soft-gold p-8 shadow-glow transition hover:-translate-y-1">
-                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M12 5v14" /><path d="M5 12h14" /><path d="M5 19l2-2" /><path d="M17 7l2-2" /></svg>
-                </div>
-                <p class="mt-6 text-sm uppercase tracking-[0.35em] text-deep-navy">FAIRE PREISE</p>
-                <h3 class="mt-4 text-2xl font-semibold text-deep-navy">Transparente Preise ohne versteckte Kosten.</h3>
-                <p class="mt-4 text-deep-navy">Klar kalkulierte Angebote ohne versteckte Kosten und schnelle Kommunikation.</p>
-              </article>
             </div>
-          </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="faq" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
-          <div class="reveal rounded-[2rem] bg-lighter-navy px-6 py-8 shadow-[0_25px_80px_rgba(15,23,42,0.08)] sm:px-8 lg:px-10">
-            <div class="mx-auto max-w-7xl">
-              <div class="text-center">
-                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray"></p>
-                <h2 class="mt-4 text-4xl font-semibold tracking-[-0.8px] text-soft-gold sm:text-5xl">VORHER UND NACHHER</h2>
-              </div>
-              <div class="mt-12 grid gap-4 sm:grid-cols-2">
-                <img src="images/GJEthe.jpg" alt="Reinigungsarbeiten" class="w-full rounded-[2rem] object-cover shadow-[0_25px_80px_rgba(15,23,42,0.08)] h-[360px] sm:h-[400px] md:h-[420px]" />
-                <img src="images/GJETHE (1).jpg" alt="Team bei der Arbeit" class="w-full rounded-[2rem] object-cover shadow-[0_25px_80px_rgba(15,23,42,0.08)] h-[360px] sm:h-[400px] md:h-[420px]" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" class="mx-auto max-w-[104rem] px-4 pb-2 sm:px-6 lg:px-8">
-          <div class="reveal py-10 md:py-14">
+    <!-- Section 5: Services (Accordion) -->
+    <section id="services" class="section-padding bg-white relative overflow-hidden">
+        <!-- Services: small accent top-left + tall strip on right edge -->
+        <div class="dot-pattern absolute top-16 left-6 w-20 h-20 opacity-30"></div>
+        <div class="dot-pattern absolute bottom-24 right-0 w-12 h-64 opacity-25"></div>
+        <div class="container-custom relative">
             <div class="text-center mb-12">
-              <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray">Kontakt</p>
-              <h2 class="mt-4 text-2xl font-semibold tracking-[-0.72px] text-soft-gold md:text-3xl xl:text-4xl">Kostenloses Angebot anfordern</h2>
-              <p class="mt-6 max-w-2xl mx-auto text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Erreichen Sie uns über E-Mail, Telefon oder besuchen Sie uns vor Ort in Lahr, Deutschland.</p>
-              <p class="mx-auto mt-4 max-w-2xl text-sm leading-6 text-soft-gold">Arbeitszeiten: Montag – Samstag 08:00 – 18:00</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">Shërbimet Tona</h2>
+                <p class="text-text-grey text-lg max-w-2xl mx-auto">
+                    Zgjidhje të plota shëndetësore të përshtatura për nevojat tuaja
+                </p>
             </div>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="reveal animate-left flex flex-col rounded-[2rem] border border-lighter-navy bg-lighter-navy p-7 shadow-glow transition hover:-translate-y-1">
-                <div class="flex items-center justify-center">
-                  <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-soft-gold text-deep-navy shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><path d="M4 4h16v16H4z" /><path d="M8 8h8" /><path d="M8 12h8" /></svg>
-                  </div>
+            
+            <!-- Active Service Card -->
+            <div class="bg-primary-dark rounded-2xl overflow-hidden mb-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="h-56 sm:h-72 lg:h-auto min-h-[200px]">
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80" 
+                             alt="Contract Manufacturing" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 lg:p-12 text-white text-center lg:text-left">
+                        <h3 class="text-xl sm:text-2xl font-bold mb-4">Organizimi i Trajtimeve Mjekësore</h3>
+                        <p class="text-white/80 mb-6">
+                            Zgjidhje të plota mjekësore nga provat klinike deri te trajtimi i plotë.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                            <div class="group flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/15 hover:border-white/40 transition-all p-4 backdrop-blur-sm">
+                                <div class="w-10 h-10 bg-white/15 group-hover:bg-white/25 transition-colors flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-white font-semibold text-sm leading-tight">Dozim Oral</div>
+                                    <div class="text-white/60 text-xs">i Ngurtë</div>
+                                </div>
+                            </div>
+                            <div class="group flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/15 hover:border-white/40 transition-all p-4 backdrop-blur-sm">
+                                <div class="w-10 h-10 bg-white/15 group-hover:bg-white/25 transition-colors flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-white font-semibold text-sm leading-tight">Injeksione</div>
+                                    <div class="text-white/60 text-xs">Sterile & të sigurta</div>
+                                </div>
+                            </div>
+                            <div class="group flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/15 hover:border-white/40 transition-all p-4 backdrop-blur-sm">
+                                <div class="w-10 h-10 bg-white/15 group-hover:bg-white/25 transition-colors flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-white font-semibold text-sm leading-tight">Produkte</div>
+                                    <div class="text-white/60 text-xs">të Liofilizuara</div>
+                                </div>
+                            </div>
+                            <div class="group flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/15 hover:border-white/40 transition-all p-4 backdrop-blur-sm">
+                                <div class="w-10 h-10 bg-white/15 group-hover:bg-white/25 transition-colors flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-white font-semibold text-sm leading-tight">Formulime</div>
+                                    <div class="text-white/60 text-xs">Topike</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-2 bg-white text-primary font-bold px-6 py-3 hover:bg-white/90 transition-all shadow-md">
+                            Lexo Më Shumë
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
                 </div>
-                <p class="mt-6 text-center text-sm uppercase tracking-[0.35em] text-muted-gray">E-Mail</p>
-                <h3 class="mt-4 text-center text-xl font-semibold text-soft-gold">hausgartenmeister1@gmail.com</h3>
-                <p class="mt-4 text-center text-sm leading-6 text-muted-gray">Schreiben Sie uns für Anfragen, Angebote oder Terminvereinbarungen.</p>
-              </article>
-              <article id="contact-middle" class="reveal flex flex-col rounded-[2rem] border border-soft-gold bg-soft-gold p-7 shadow-glow transition hover:-translate-y-1">
-                <div class="flex items-center justify-center">
-                  <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72 12.42 12.42 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9 10.7a16 16 0 0 0 6.3 6.3l1.05-1.05a2 2 0 0 1 2.11-.45 12.42 12.42 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-                  </div>
-                </div>
-                <p class="mt-6 text-center text-sm uppercase tracking-[0.35em] text-deep-navy">Telefon</p>
-                <h3 class="mt-4 text-center text-xl font-semibold text-deep-navy">+49 162 5793601</h3>
-                <p class="mt-4 text-center text-sm leading-6 text-deep-navy">Rufen Sie uns an für Beratung, Termine oder ein kostenloses Angebot.</p>
-              </article>
-              <article class="reveal animate-right flex flex-col rounded-[2rem] border border-lighter-navy bg-lighter-navy p-7 shadow-glow transition hover:-translate-y-1">
-                <div class="flex items-center justify-center">
-                  <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-soft-gold text-deep-navy shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                  </div>
-                </div>
-                <p class="mt-6 text-center text-sm uppercase tracking-[0.35em] text-muted-gray">Standort</p>
-                <h3 class="mt-4 text-center text-xl font-semibold text-soft-gold">Lahr, Deutschland</h3>
-                <p class="mt-4 text-center text-sm leading-6 text-muted-gray">Wir sind Ihr lokaler Partner für Reinigung, Gartenpflege und Außenarbeiten.</p>
-              </article>
             </div>
-          </div>
-        </section>
-
-      </main>
-
-      <footer class="mx-auto max-w-[104rem] px-4 py-1 sm:px-6 lg:px-8 text-muted-gray">
-        <div class="rounded-[2rem] border border-lighter-navy bg-lighter-navy px-8 py-5 text-center shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
-          <p class="text-soft-gold font-semibold">Hausgarten Meister – Full Service Hausreinigung, Gartenpflege & Außenarbeiten in Lahr</p>
-          <p class="mt-4">Lahr, Deutschland</p>
-          <p class="mt-2">Telefon: +49 162 5793601</p>
-          <p class="mt-2">E-Mail: hausgartenmeister1@gmail.com</p>
-          <p class="mt-6 text-sm text-muted-gray">© 2026 Website Created By sk70342@universum-ks.org</p>
+            
+            <!-- Accordion Items -->
+            <div class="space-y-0">
+                <!-- Accordion Item 1 -->
+                <div class="border-b border-gray-200">
+                    <button class="accordion-toggle w-full py-4 flex justify-between items-center text-left" data-accordion="1">
+                        <span class="text-base sm:text-xl font-semibold text-text-dark pr-2">Substanca Aktive me Potencial të Lartë</span>
+                        <div class="flex items-center gap-2 flex-shrink-0">
+                            <span class="text-primary font-semibold hidden sm:inline">Mëso Më Shumë</span>
+                            <svg class="w-6 h-6 text-primary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="accordion-1" class="accordion-content">
+                        <div class="pb-6">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80" 
+                                         alt="High Potency Actives" 
+                                         class="w-full h-64 object-cover rounded-xl">
+                                </div>
+                                <div>
+                                    <p class="text-text-grey mb-4">
+                                        Objektet tona moderne trajtojnë komponime me potencial të lartë me standardet më të larta të sigurisë. Mbajmë kapacitete të dedikuara të frenimit OEB-5.
+                                    </p>
+                                    <ul class="space-y-2 mb-6">
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Frenimi OEB-5
+                                        </li>
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Trajtim i Dedikuar API
+                                        </li>
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Sisteme të Avancuara Filtrimi
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn-primary inline-block">Merr Ofertë</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accordion Item 2 -->
+                <div class="border-b border-gray-200">
+                    <button class="accordion-toggle w-full py-4 flex justify-between items-center text-left" data-accordion="2">
+                        <span class="text-base sm:text-xl font-semibold text-text-dark pr-2">Prokurimi</span>
+                        <div class="flex items-center gap-2 flex-shrink-0">
+                            <span class="text-primary font-semibold hidden sm:inline">Mëso Më Shumë</span>
+                            <svg class="w-6 h-6 text-primary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="accordion-2" class="accordion-content">
+                        <div class="pb-6">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1586880244406-556ebe35f282?w=800&q=80" 
+                                         alt="Sourcing" 
+                                         class="w-full h-64 object-cover rounded-xl">
+                                </div>
+                                <div>
+                                    <p class="text-text-grey mb-4">
+                                        Rrjet global prokurimi për API, eksipientë dhe lëndë të para me sigurim rigoroz të cilësisë.
+                                    </p>
+                                    <ul class="space-y-2 mb-6">
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Rrjet Global Furnizuesish
+                                        </li>
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Furnizues të Audituar për Cilësi
+                                        </li>
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Gjurmueshmëria & Dokumentacioni
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn-primary inline-block">Merr Ofertë</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accordion Item 3 -->
+                <div class="border-b border-gray-200">
+                    <button class="accordion-toggle w-full py-4 flex justify-between items-center text-left" data-accordion="3">
+                        <span class="text-base sm:text-xl font-semibold text-text-dark pr-2">Auditime & Pajtueshmëri</span>
+                        <div class="flex items-center gap-2 flex-shrink-0">
+                            <span class="text-primary font-semibold hidden sm:inline">Mëso Më Shumë</span>
+                            <svg class="w-6 h-6 text-primary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="accordion-3" class="accordion-content">
+                        <div class="pb-6">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" 
+                                         alt="Audits & Compliances" 
+                                         class="w-full h-64 object-cover rounded-xl">
+                                </div>
+                                <div>
+                                    <p class="text-text-grey mb-4">
+                                        Mbështetje e plotë rregullatore dhe shërbime pajtueshmërie për të siguruar që produktet tuaja plotësojnë standardet globale.
+                                    </p>
+                                    <ul class="space-y-2 mb-6">
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Auditime FDA/EMA
+                                        </li>
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Pajtueshmëri GMP
+                                        </li>
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Paraqitje Rregullatore
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn-primary inline-block">Merr Ofertë</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accordion Item 4 -->
+                <div class="border-b border-gray-200">
+                    <button class="accordion-toggle w-full py-4 flex justify-between items-center text-left" data-accordion="4">
+                        <span class="text-base sm:text-xl font-semibold text-text-dark pr-2">Shërbime Analitike</span>
+                        <div class="flex items-center gap-2 flex-shrink-0">
+                            <span class="text-primary font-semibold hidden sm:inline">Mëso Më Shumë</span>
+                            <svg class="w-6 h-6 text-primary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="accordion-4" class="accordion-content">
+                        <div class="pb-6">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <div>
+                                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80" 
+                                         alt="Analytical Services" 
+                                         class="w-full h-64 object-cover rounded-xl">
+                                </div>
+                                <div>
+                                    <p class="text-text-grey mb-4">
+                                        Shërbime të plota testimi analitik me instrumentacion modern dhe ekspertizë të lartë.
+                                    </p>
+                                    <ul class="space-y-2 mb-6">
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Zhvillimi i Metodave
+                                        </li>
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Testimi i Stabilitetit
+                                        </li>
+                                        <li class="flex items-center gap-2 text-text-grey">
+                                            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            Kontrolli i Cilësisë
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn-primary inline-block">Merr Ofertë</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </footer>
+    </section>
 
-    </div>
+    <!-- Section 6: Kërkimi & Zhvillimi -->
+    <section id="rd" class="section-padding bg-light-mint relative overflow-hidden">
+        <!-- R&D: large block top-left bleeding off edge -->
+        <div class="dot-pattern absolute -top-6 -left-6 w-56 h-56 opacity-25"></div>
+        <div class="container-custom relative">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <!-- Left Column - Image Card -->
+                    <div class="relative h-72 md:h-96 lg:h-full lg:min-h-[400px]">
+                        <img src="https://images.unsplash.com/photo-1532090481697-2c79e227a30f?w=800&q=80" 
+                             alt="Kërkimi & Zhvillimi" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-primary-dark/80 flex items-center justify-center">
+                            <h3 class="text-3xl md:text-4xl font-bold text-white text-center px-6">
+                                Kërkimi & Zhvillimi
+                            </h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Column - Capabilities Grid -->
+                    <div class="p-8 lg:p-12">
+                        <h3 class="text-2xl font-bold text-text-dark mb-6">Kapacitetet Tona</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-grey">Zhvillimi i Formulimeve</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-grey">Optimizimi i Proceseve</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-grey">Transferimi i Teknologjisë</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-grey">Zhvillimi i Metodave Analitike</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-grey">Studime Stabiliteti</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-grey">Karakterizimi API</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-grey">Studime Para-formulimit</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="text-text-grey">Sisteme Novatore të Shpërndarjes së Ilaçeve</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Stats / Badges Banner -->
+    <section class="section-padding bg-primary relative overflow-hidden">
+        <!-- Stats: thin decorative bands top and bottom -->
+        <div class="dot-pattern-light absolute top-0 left-0 right-0 h-10 opacity-60"></div>
+        <div class="dot-pattern-light absolute bottom-0 left-0 right-0 h-10 opacity-60"></div>
+        <div class="container-custom relative">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Stat 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-white font-bold text-lg">Kapacitete GMP</h4>
+                    <p class="text-white/80 text-sm mt-1">OBSH-GMP, USFDA, EMA</p>
+                </div>
+                
+                <!-- Stat 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-white font-bold text-lg">Mbështetje Dokumentacioni</h4>
+                    <p class="text-white/80 text-sm mt-1">DMF, CTD, CMC</p>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-white font-bold text-lg">Prania Globale</h4>
+                    <p class="text-white/80 text-sm mt-1">30+ Vende të Shërbyera</p>
+                </div>
+                
+                <!-- Stat 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-white font-bold text-lg">Ekip Ekspertësh</h4>
+                    <p class="text-white/80 text-sm mt-1">200+ Specialistë</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Testimonials -->
+    <section class="section-padding bg-white relative overflow-hidden">
+        <!-- Testimonials: scattered cluster of small dots -->
+        <div class="dot-pattern absolute top-20 left-10 w-16 h-16 opacity-40"></div>
+        <div class="dot-pattern absolute top-44 left-32 w-10 h-10 opacity-30"></div>
+        <div class="dot-pattern absolute bottom-20 right-12 w-20 h-20 opacity-30"></div>
+        <div class="container-custom relative">
+            <!-- Header -->
+            <div class="text-center mb-14">
+                <span class="inline-block bg-primary/10 text-primary text-sm font-semibold px-4 py-1.5 rounded-full mb-4">Dëshmitë e Pacientëve</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">Çfarë Thonë Pacientët Tanë</h2>
+                <p class="text-text-grey text-lg max-w-xl mx-auto">Kënaqësia e pacientëve tanë është prioriteti ynë kryesor.</p>
+            </div>
+
+            <!-- Featured Testimonial -->
+            <div class="bg-primary rounded-2xl p-8 md:p-12 mb-10 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-shrink-0">
+                        <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white/40">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" alt="Arben Krasniqi" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <div class="flex justify-center md:justify-start gap-1 mb-4">
+                            <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                        <svg class="w-8 h-8 text-white/30 mb-3 mx-auto md:mx-0" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <blockquote class="text-white text-lg md:text-xl font-medium mb-4 leading-relaxed">
+                            "Barnatore Diellza ka qenë një partner i çmuar në udhëtimin tonë shëndetësor. Ekspertiza e tyre në kujdesin mjekësor dhe shërbimin e dedikuar ka përshpejtuar rikuperimin tonë ndjeshëm."
+                        </blockquote>
+                        <p class="text-white font-bold">Arben Krasniqi</p>
+                        <p class="text-white/70 text-sm">Pacient, Prishtinë</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-light-mint rounded-xl p-6 flex flex-col gap-4 hover:shadow-md transition-shadow">
+                    <div class="flex gap-1">
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-text-grey text-sm leading-relaxed flex-1">"Shërbimi ishte i jashtëzakonshëm. Mjekët ishin shumë të kujdesshëm dhe profesionalë gjatë gjithë vizitës sime."</p>
+                    <div class="flex items-center gap-3 pt-2 border-t border-gray-200">
+                        <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Fatmire Berisha" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="font-semibold text-text-dark text-sm">Fatmire Berisha</p>
+                            <p class="text-text-grey text-xs">Paciente, Ferizaj</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-light-mint rounded-xl p-6 flex flex-col gap-4 hover:shadow-md transition-shadow">
+                    <div class="flex gap-1">
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-text-grey text-sm leading-relaxed flex-1">"Barnatorja Diellza është vendi ku besoj plotësisht për shëndetin e familjes time. Ekipi mjekësor është i dedikuar dhe gjithmonë i gatshëm."</p>
+                    <div class="flex items-center gap-3 pt-2 border-t border-gray-200">
+                        <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Blerim Hoxha" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="font-semibold text-text-dark text-sm">Blerim Hoxha</p>
+                            <p class="text-text-grey text-xs">Pacient, Gjakovë</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-light-mint rounded-xl p-6 flex flex-col gap-4 hover:shadow-md transition-shadow">
+                    <div class="flex gap-1">
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-text-grey text-sm leading-relaxed flex-1">"Trajtimet ishin efektive dhe stafi ishte shumë i ngrohtë. Ndihem mirënjohës për kujdesin që mora. Rekomandoj me gjithë zemër."</p>
+                    <div class="flex items-center gap-3 pt-2 border-t border-gray-200">
+                        <div class="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Vjosa Ahmeti" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="font-semibold text-text-dark text-sm">Vjosa Ahmeti</p>
+                            <p class="text-text-grey text-xs">Paciente, Mitrovicë</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: News & Articles (Blog) -->
+    <section id="news" class="section-padding bg-light-mint relative overflow-hidden">
+        <!-- News: wide horizontal band along bottom -->
+        <div class="dot-pattern absolute -bottom-4 left-0 right-0 h-20 opacity-25"></div>
+        <div class="container-custom relative">
+            <!-- Header -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 gap-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-text-dark">Lajme & Artikuj</h2>
+                <a href="#" class="text-primary font-semibold hover:underline flex items-center gap-2">
+                    Shiko Të Gjitha
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+            
+            <!-- Articles Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Article Card 1 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&q=80" 
+                             alt="Article" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-text-grey mb-2">April 15, 2026</p>
+                        <h3 class="text-xl font-bold text-text-dark mb-3">
+                            Advances in Continuous Manufacturing
+                        </h3>
+                        <p class="text-text-grey mb-4">
+                            Exploring the benefits of continuous manufacturing in pharmaceutical production and its impact on quality and efficiency.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:underline">Read More</a>
+                    </div>
+                </article>
+                
+                <!-- Article Card 2 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=800&q=80" 
+                             alt="Article" 
+                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-text-grey mb-2">April 8, 2026</p>
+                        <h3 class="text-xl font-bold text-text-dark mb-3">
+                            Navigating Regulatory Challenges in 2026
+                        </h3>
+                        <p class="text-text-grey mb-4">
+                            Key insights on the evolving regulatory landscape and how to stay compliant with global pharmaceutical standards.
+                        </p>
+                        <a href="#" class="text-primary font-semibold hover:underline">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Contact -->
+    <section id="contact" class="section-padding bg-light-mint relative overflow-hidden">
+        <!-- Contact: thin tall strip right edge + small corner -->
+        <div class="dot-pattern absolute top-0 bottom-0 right-0 w-24 opacity-30"></div>
+        <div class="dot-pattern absolute -bottom-4 left-12 w-28 h-28 opacity-30"></div>
+        <div class="container-custom relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+                <!-- Left: Heading -->
+                <div class="lg:col-span-5 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-12 h-0.5 bg-primary"></div>
+                        <span class="text-primary text-sm font-bold tracking-widest uppercase">Kontakti</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-text-dark leading-[1.05] mb-6">
+                        Le t'i japim <span class="relative inline-block"><span class="relative z-10">zë</span><span class="absolute bottom-1 left-0 right-0 h-3 bg-primary/30 -z-0"></span></span> nevojave tuaja.
+                    </h2>
+                    <p class="text-text-grey text-lg max-w-md">Jemi këtu për çdo pyetje, kërkesë ose porosi. Zgjidh kanalin që të përshtatet më shumë.</p>
+                </div>
+
+                <!-- Right: Contact cards stacked -->
+                <div class="lg:col-span-7 space-y-4">
+                    <!-- Phone -->
+                    <a href="tel:+38344123456" class="group relative flex items-center gap-5 bg-white p-6 hover:bg-primary transition-all duration-300 shadow-sm hover:shadow-2xl overflow-hidden">
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary group-hover:w-full transition-all duration-500 -z-0"></div>
+                        <div class="relative w-16 h-16 bg-primary/10 group-hover:bg-white flex items-center justify-center flex-shrink-0 transition-colors">
+                            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        </div>
+                        <div class="relative flex-1 min-w-0">
+                            <div class="text-xs font-bold tracking-widest uppercase text-primary group-hover:text-white/80 transition-colors mb-1">Telefon</div>
+                            <div class="text-text-dark group-hover:text-white font-bold text-xl truncate transition-colors">+383 44 123 456</div>
+                        </div>
+                        <div class="relative w-10 h-10 flex items-center justify-center text-text-grey group-hover:text-white group-hover:translate-x-1 transition-all flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </div>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:info@diellza.com" class="group relative flex items-center gap-5 bg-white p-6 hover:bg-primary transition-all duration-300 shadow-sm hover:shadow-2xl overflow-hidden">
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary group-hover:w-full transition-all duration-500 -z-0"></div>
+                        <div class="relative w-16 h-16 bg-primary/10 group-hover:bg-white flex items-center justify-center flex-shrink-0 transition-colors">
+                            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <div class="relative flex-1 min-w-0">
+                            <div class="text-xs font-bold tracking-widest uppercase text-primary group-hover:text-white/80 transition-colors mb-1">Email</div>
+                            <div class="text-text-dark group-hover:text-white font-bold text-xl truncate transition-colors">info@diellza.com</div>
+                        </div>
+                        <div class="relative w-10 h-10 flex items-center justify-center text-text-grey group-hover:text-white group-hover:translate-x-1 transition-all flex-shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </div>
+                    </a>
+
+                    <!-- Address -->
+                    <div class="group relative flex items-center gap-5 bg-white p-6 shadow-sm overflow-hidden">
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary"></div>
+                        <div class="relative w-16 h-16 bg-primary/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </div>
+                        <div class="relative flex-1 min-w-0">
+                            <div class="text-xs font-bold tracking-widest uppercase text-primary mb-1">Adresa</div>
+                            <div class="text-text-dark font-bold text-xl">Prishtinë, Kosovë</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: Footer -->
+    <footer class="bg-[#d4e8e8]">
+        <!-- Bottom Bar -->
+        <div class="bg-primary-dark py-4">
+            <div class="container-custom">
+                <p class="text-white text-center">
+                    &copy; 2026 Website i Krijuar Nga <a href="mailto:sk70342@universum-ks.org" class="underline hover:text-white/80">sk70342@universum-ks.org</a>
+                </p>
+            </div>
+        </div>
+    </footer>
 
     <script>
-      const revealElements = document.querySelectorAll('.reveal, .section-block, .hero-text, .hero-image');
-      const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
+        // Accordion functionality
+        const accordionToggles = document.querySelectorAll('.accordion-toggle');
+        
+        accordionToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const accordionId = toggle.getAttribute('data-accordion');
+                const accordionContent = document.getElementById(`accordion-${accordionId}`);
+                const arrow = toggle.querySelector('svg:last-child');
+                
+                // Close all other accordions
+                document.querySelectorAll('.accordion-content').forEach(content => {
+                    if (content !== accordionContent && content.classList.contains('active')) {
+                        content.classList.remove('active');
+                    }
+                });
+                
+                document.querySelectorAll('.accordion-toggle svg:last-child').forEach(svg => {
+                    if (svg !== arrow) {
+                        svg.classList.remove('rotate-180');
+                    }
+                });
+                
+                // Toggle current accordion
+                accordionContent.classList.toggle('active');
+                arrow.classList.toggle('rotate-180');
+            });
         });
-      }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
-      revealElements.forEach((el) => revealObserver.observe(el));
 
-      const heroSection = document.querySelector('#home');
-      const updateHeroParallax = () => {
-        if (!heroSection) return;
-        const rect = heroSection.getBoundingClientRect();
-        const offset = Math.max(Math.min(rect.top * 0.15, 36), -36);
-        heroSection.style.setProperty('--hero-parallax', `${offset}px`);
-      };
-      let frame;
-      const onScroll = () => {
-        if (frame) return;
-        frame = requestAnimationFrame(() => {
-          updateHeroParallax();
-          frame = null;
+        // Hide nav on scroll down, show on scroll up
+        let lastScrollY = 0;
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY && currentScrollY > 80) {
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                nav.style.transform = 'translateY(0)';
+            }
+            lastScrollY = currentScrollY;
         });
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', onScroll);
-      onScroll();
 
-      const interactiveElements = document.querySelectorAll('a, button');
-      interactiveElements.forEach((element) => {
-        element.addEventListener('pointerdown', () => element.classList.add('pressed'));
-        element.addEventListener('pointerup', () => element.classList.remove('pressed'));
-        element.addEventListener('pointerleave', () => element.classList.remove('pressed'));
-        element.addEventListener('pointercancel', () => element.classList.remove('pressed'));
-      });
-
-      // Mobile menu toggle
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
+        // Pikat Tona dropdown
+        function togglePikat() {
+            const menu = document.getElementById('pikat-menu');
+            const arrow = document.getElementById('pikat-arrow');
+            menu.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-180');
+        }
+        function togglePikatMobile() {
+            const menu = document.getElementById('pikat-menu-mobile');
+            const arrow = document.getElementById('pikat-arrow-mobile');
+            menu.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-180');
+        }
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('pikat-dropdown');
+            if (dropdown && !dropdown.contains(e.target)) {
+                document.getElementById('pikat-menu').classList.add('hidden');
+                document.getElementById('pikat-arrow').classList.remove('rotate-180');
+            }
+            const dropdownM = document.getElementById('pikat-dropdown-mobile');
+            if (dropdownM && !dropdownM.contains(e.target)) {
+                document.getElementById('pikat-menu-mobile').classList.add('hidden');
+                document.getElementById('pikat-arrow-mobile').classList.remove('rotate-180');
+            }
         });
-      }
 
-      // Mobile Sticky Header (only on screens < 768px)
-      const header = document.getElementById('main-header');
-      let lastScrollY = window.scrollY;
-      let isMobile = window.innerWidth < 768;
-
-      function updateMobileHeader() {
-        if (!isMobile) return;
-
-        const currentScrollY = window.scrollY;
-        const scrollDelta = currentScrollY - lastScrollY;
-
-        // Add scrolled class when not at top
-        if (currentScrollY > 10) {
-          header.classList.add('header--scrolled');
-        } else {
-          header.classList.remove('header--scrolled');
+        // Contact form submit handler
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const success = document.getElementById('contact-success');
+            success.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => success.classList.add('hidden'), 5000);
         }
 
-        // Hide/show header based on scroll direction
-        if (scrollDelta > 5 && currentScrollY > 100) {
-          // Scrolling down and past threshold
-          header.classList.add('header--hidden');
-        } else if (scrollDelta < -5 || currentScrollY <= 100) {
-          // Scrolling up or near top
-          header.classList.remove('header--hidden');
-        }
-
-        lastScrollY = currentScrollY;
-      }
-
-      // Throttle scroll events for better performance
-      let ticking = false;
-      function onScrollMobile() {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            updateMobileHeader();
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }
-
-      function checkMobile() {
-        isMobile = window.innerWidth < 768;
-        if (isMobile) {
-          window.addEventListener('scroll', onScrollMobile, { passive: true });
-          updateMobileHeader();
-        } else {
-          window.removeEventListener('scroll', onScrollMobile);
-          header.classList.remove('header--hidden', 'header--scrolled');
-        }
-      }
-
-      window.addEventListener('resize', checkMobile);
-      checkMobile(); // Initial check
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
     </script>
-  </body>
+</body>
 </html>
-
