@@ -1,662 +1,1292 @@
 <!DOCTYPE html>
-<html lang="de">
-  <head>
-  <link rel="icon" href="logohgm1337.png" type="image/png">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QQBKDJGP5B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Eli — Arti i Rafinimit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-  gtag('config', 'G-QQBKDJGP5B');
-</script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Professionelle Reinigungs-, Gartenpflege-, Laubentfernung- und Hochdruckreinigungsdienste in Lahr, Deutschland. Zuverlässiger lokaler Service für Privat- und Geschäftskunden." />
-    <meta name="keywords" content="Reinigungsservice Lahr, Gartenpflege Lahr, Hochdruckreinigung Lahr, Außenreinigung Lahr Deutschland, Laubentfernung Lahr, Herbstreinigung Garten Lahr, Gebäudereinigung Lahr, Hausmeisterservice Lahr" />
-    <meta name="theme-color" content="#0A0F1A" />
-    <title>Reinigungs-, Garten- und Außenarbeiten in Lahr, Deutschland | Hausgarten Meister</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'deep-navy': '#0A0F1A',
-              'lighter-navy': '#161B28',
-              'soft-gold': '#E5D1B0',
-              'muted-gray': '#A0A5B1',
-              'white': '#FFFFFF',
-            },
-            fontFamily: {
-              sans: ['Playfair Display', 'serif'],
-            },
-            boxShadow: {
-              glow: '0 25px 80px rgba(15, 23, 42, 0.08)',
-            },
-            backgroundImage: {
-              aura: 'radial-gradient(circle at top, rgba(15, 23, 42, 0.05), transparent 30%), radial-gradient(circle at center, rgba(15, 23, 42, 0.03), transparent 35%), radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.02), transparent 25%)',
-            },
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            linen:   '#F9F5F0',
+            charcoal:'#232323',
+            taupe:   '#BD9A7A',
+            taupeLight: '#EAD8C7',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:  ['Inter', 'system-ui', 'sans-serif'],
           },
         },
-      };
-    </script>
-    <style>
-      :root {
-        color-scheme: dark;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        background: #0A0F1A;
-        min-height: 100%;
-      }
-      @media (max-width: 767px) {
-        body {
-          padding-top: 80px; /* Account for fixed header height */
-        }
-      }
-      body::before {
-        content: '';
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        background-image: radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
-        background-size: 18px 18px;
-        opacity: 0.22;
-        z-index: -1;
-      }
-      #home {
-        position: relative;
-        overflow: hidden;
-        margin-top: 2rem;
-      }
-      #home::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        background-image: radial-gradient(circle at 22% 12%, rgba(229,209,176,0.12), transparent 25%),
-                          radial-gradient(circle at 82% 10%, rgba(160,165,177,0.08), transparent 18%),
-                          radial-gradient(circle at 50% 80%, rgba(255,255,255,0.04), transparent 20%);
-        opacity: 0.92;
-        transform: translate3d(var(--hero-parallax, 0px), 0, 0);
-        transition: transform 0.12s ease-out;
-        z-index: 0;
-      }
-      @media (max-width: 1023px) {
-        #home::before {
-          display: none;
-        }
-      }
-      #home > .mx-auto {
-        position: relative;
-        z-index: 1;
-      }
-      .reveal {
-        opacity: 0;
-        transform: translateY(1.25rem) scale(0.98);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-        will-change: opacity, transform;
-      }
-      .reveal.visible {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-      .reveal-delay-small {
-        transition-delay: 0.12s;
-      }
-      .reveal-delay-medium {
-        transition-delay: 0.22s;
-      }
-      .reveal-delay-large {
-        transition-delay: 0.32s;
-      }
-      .animate-left {
-        opacity: 0;
-        transform: translateX(-50px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-        will-change: opacity, transform;
-      }
-      .animate-left.visible {
-        opacity: 1;
-        transform: translateX(0);
-      }
-      .animate-right {
-        opacity: 0;
-        transform: translateX(50px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
-        will-change: opacity, transform;
-      }
-      .animate-right.visible {
-        opacity: 1;
-        transform: translateX(0);
-      }
-      a,
-      button {
-        transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-      }
-      a:hover,
-      button:hover {
-        transform: translateY(-1px) scale(1.01);
-      }
-      a:active,
-      button:active {
-        transform: translateY(0) scale(0.98);
-      }
-      .pressed {
-        transform: translateY(1px) scale(0.98) !important;
-      }
-      a,
-      button {
-        cursor: pointer;
-      }
-      .hover-soft-shadow:hover {
-        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
-      }
-      .card-hover {
-        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-      }
-      .card-hover:hover {
-        transform: translateY(-6px);
-        border-color: rgba(229, 209, 176, 0.24);
-        box-shadow: 0 30px 75px rgba(15, 23, 42, 0.12);
-      }
-      .hero-text,
-      .hero-image,
-      .section-block {
-        opacity: 0;
-        transform: translateY(1.5rem);
-        transition: opacity 0.9s ease, transform 0.9s ease;
-      }
-      .hero-text.visible,
-      .hero-image.visible,
-      .section-block.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      .swipe-left,
-      .swipe-right {
-        opacity: 0;
-        transform: translateX(0) translateY(1.5rem);
-        transition: opacity 2.4s ease, transform 2.4s ease;
-      }
-      .swipe-left {
-        transform: translateX(-2.25rem) translateY(1.5rem);
-      }
-      .swipe-right {
-        transform: translateX(2.25rem) translateY(1.5rem);
-      }
-      .swipe-left.visible,
-      .swipe-right.visible {
-        opacity: 1;
-        transform: translateX(0) translateY(0);
-      }
-      .hero-text {
-        animation: slideInLeft 1s ease-out 0.2s both;
-      }
-      .hero-image {
-        animation: slideInRight 1s ease-out 0.4s both;
-      }
-      @keyframes slideInLeft {
-        from { transform: translateX(-50px); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-      }
-      @keyframes slideInRight {
-        from { transform: translateX(50px); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-      }
-      details summary::-webkit-details-marker {
-        display: none;
-      }
-      details summary {
-        list-style: none;
-      }
-      /* Mobile Sticky Header Styles */
-      @media (max-width: 767px) {
-        #main-header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          z-index: 50;
-          border-radius: 0 0 33px 33px;
-        }
-        #main-header.header--hidden {
-          transform: translateY(-100%);
-        }
-        #main-header.header--scrolled {
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-          background-color: rgba(22, 27, 40, 0.98);
-        }
-      }
-      details[open] summary .faq-icon {
-        transform: rotate(180deg);
-      }
-      .faq-icon {
-        transition: transform 0.3s ease;
-      }
-    </style>
-  </head>
-  <body class="text-muted-gray antialiased m-0 p-0">
-    <div class="relative overflow-hidden">
-      <header id="main-header" class="border-b border-lighter-navy bg-lighter-navy/90 backdrop-blur-xl transition-all duration-300">
-        <div class="mx-auto flex max-w-[104rem] items-center justify-between px-4 py-5 sm:px-6 lg:px-8">
-          <a href="#home" class="inline-flex items-center">
-            <span class="font-semibold text-soft-gold tracking-[0.18em] uppercase">HAUS-GARTEN</span>
-          </a>
-          <nav class="hidden items-center gap-8 text-sm font-medium text-muted-gray md:flex">
-            <a href="#home" class="transition hover:text-soft-gold">Startseite</a>
-            <a href="#core" class="transition hover:text-soft-gold">Über uns</a>
-            <a href="#features" class="transition hover:text-soft-gold">Leistungen</a>
-            <a href="#allo" class="transition hover:text-soft-gold">Warum wir</a>
-          </nav>
-          <div class="flex items-center gap-3">
-            <a href="#contact" class="hidden rounded-2xl border border-soft-gold bg-soft-gold px-4 py-2 text-sm font-semibold text-deep-navy transition hover:bg-soft-gold/90 md:inline-flex">Kontakt</a>
-            <button id="mobile-menu-button" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-lighter-navy text-soft-gold hover:bg-lighter-navy/80 transition">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-lighter-navy/95 backdrop-blur-xl border-t border-lighter-navy">
-          <div class="px-4 py-6 space-y-4">
-            <a href="#home" class="block text-muted-gray hover:text-soft-gold transition py-2">Startseite</a>
-            <a href="#core" class="block text-muted-gray hover:text-soft-gold transition py-2">Über uns</a>
-            <a href="#features" class="block text-muted-gray hover:text-soft-gold transition py-2">Leistungen</a>
-            <a href="#allo" class="block text-muted-gray hover:text-soft-gold transition py-2">Warum wir</a>
-            <a href="#contact" class="block bg-soft-gold text-deep-navy px-4 py-2 rounded-2xl text-center font-semibold hover:bg-soft-gold/80 transition">Kontakt</a>
-          </div>
-        </div>
-      </header>
+      },
+    }
+  </script>
 
-      <section id="home" class="relative overflow-hidden bg-deep-navy py-6 sm:py-10">
-        <div class="mx-auto grid max-w-[104rem] gap-10 px-4 sm:px-6 lg:px-8 lg:grid-cols-[0.75fr_0.9fr] lg:items-stretch">
-          <div class="hidden lg:block relative h-full overflow-hidden rounded-[2.5rem] border border-lighter-navy bg-lighter-navy shadow-glow order-1 lg:order-2 hero-image">
-            <div class="absolute -right-8 top-8 h-44 w-44 rounded-full bg-accent-green/30 blur-3xl"></div>
-            <div class="absolute -left-8 bottom-10 h-36 w-36 rounded-full bg-accent-green/15 blur-3xl"></div>
-            <img src="images/FIRSTFOTO.jpg" alt="Hero image" class="relative h-full w-full rounded-[2.5rem] object-cover shadow-[0_35px_100px_rgba(15,23,42,0.12)]" />
-          </div>
-          <div class="relative overflow-hidden rounded-[2.5rem] border border-lighter-navy bg-lighter-navy p-8 shadow-glow sm:p-10 order-2 lg:order-1 text-center hero-text">
-            <h1 class="mt-8 text-5xl font-semibold tracking-[-0.75px] text-soft-gold sm:text-6xl lg:text-7xl">HAUS GARTEN MEISTER</h1>
-            <p class="mt-8 max-w-2xl text-base leading-8 text-muted-gray sm:text-xl mx-auto">Professionelle Reinigungs-, Garten- und Außenarbeiten in Lahr, Deutschland</p>
-            <img src="images/FIRSTFOTO.jpg" alt="Hero image" class="mt-8 mx-auto block w-full max-w-[34rem] rounded-[2rem] object-cover shadow-[0_35px_100px_rgba(15,23,42,0.12)] lg:hidden" />
-            <p class="mt-6 max-w-2xl text-base leading-8 text-muted-gray sm:text-xl mx-auto">Hausgarten Meister bietet professionelle Reinigungs-, Haus- und Gartenservices in Lahr an.</p>
-            <p class="mt-6 max-w-2xl text-base leading-8 text-muted-gray sm:text-xl mx-auto">Wir sind spezialisiert auf komplette Haushaltsreinigung, Innenreinigung, Büroreinigung, Fensterreinigung, Garagenreinigung sowie Gartenpflege und Außenarbeiten.</p>
-            <p class="mt-6 max-w-2xl text-base leading-8 text-muted-gray sm:text-xl mx-auto">Unsere Dienstleistungen umfassen auch Hochdruckreinigung, Fassadenreinigung, Steinreinigung und leichte Abbrucharbeiten.</p>
-            <p class="mt-6 text-sm uppercase tracking-[0.35em] text-soft-gold">FULL SERVICE. SAUBER. ZUVERLÄSSIG.</p>
-            <p class="mt-3 text-sm text-muted-gray">Fordern Sie jetzt Ihr kostenloses Angebot in Lahr an.</p>
-            <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <a href="#contact" class="inline-flex items-center justify-center rounded-[1.5rem] bg-soft-gold px-6 py-3 text-sm font-semibold text-deep-navy shadow-lg shadow-accent-green/10 transition hover:bg-soft-gold/80">Kontakt</a>
-              <a href="#features" class="inline-flex items-center justify-center rounded-[1.5rem] border border-lighter-navy bg-lighter-navy px-6 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80">Unsere Leistungen</a>
-            </div>
-          </div>
-        </div>
-      </section>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #F9F5F0; color: #232323; font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
-      <section id="core" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8 overflow-x-hidden">
-          <div class="reveal py-10 md:py-14">
-            <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-              <div class="space-y-8 text-center sm:text-left order-1 lg:order-2">
-                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray">Über uns</p>
-                <h2 class="text-2xl font-semibold leading-[110%] tracking-[-0.96px] text-soft-gold sm:text-[44px] xl:text-[44px]">Wir sind ein erfahrenes Dienstleistungsunternehmen aus Lahr.</h2>
-                <p class="max-w-xl text-[16px] leading-[150%] sm:text-base sm:leading-6 text-muted-gray">Unser Unternehmen ist lokal in Lahr ansässig und spezialisiert auf komplette Reinigungs- und Gartenservices für Häuser, Wohnungen und Außenbereiche.</p>
-                <p class="max-w-xl text-[16px] leading-[150%] sm:text-base sm:leading-6 text-muted-gray">Wir bieten Full-Service-Lösungen für private Haushalte und Gewerbekunden – von Innenreinigung bis Gartenpflege und Außenreinigung.</p>
-                <p class="max-w-xl text-[16px] leading-[150%] sm:text-base sm:leading-6 text-muted-gray">Mit moderner Ausrüstung und effizienten Methoden sorgen wir für gründliche und zuverlässige Ergebnisse.</p>
-                <div class="grid gap-4 sm:grid-cols-2">
-                  <div class="rounded-[1.75rem] border border-soft-gold bg-soft-gold p-6">
-                    <p class="text-sm uppercase tracking-[0.35em] text-deep-navy">Qualität</p>
-                    <h3 class="mt-4 text-xl font-semibold text-deep-navy">Höchste Qualität bei jeder Hausreinigung, Gartenarbeit und Außenreinigung in Lahr.</h3>
-                    <p class="mt-3 text-deep-navy">Wir arbeiten präzise, termingerecht und mit hochwertigen Materialien für nachhaltige Ergebnisse.</p>
-                  </div>
-                  <div class="rounded-[1.75rem] border border-lighter-navy bg-lighter-navy p-6">
-                    <p class="text-sm uppercase tracking-[0.35em] text-soft-gold">Projekte</p>
-                    <h3 class="mt-4 text-xl font-semibold text-soft-gold">Wir betreuen kleine private Haushalte sowie große gewerbliche Objekte in Lahr und Umgebung.</h3>
-                    <p class="mt-3 text-muted-gray">Ob Einfamilienhaus oder Gewerbeobjekt – wir übernehmen Aufgaben jeder Größe mit größter Sorgfalt.</p>
-                  </div>
-                </div>
-                <div class="flex flex-wrap items-center justify-center gap-4 sm:justify-start">
-                  <a href="#contact" class="inline-flex items-center justify-center rounded-2xl bg-soft-gold px-6 py-3 text-sm font-semibold text-deep-navy transition hover:bg-soft-gold/90">Jetzt anfragen</a>
-                  <a href="#allo" class="inline-flex items-center justify-center rounded-2xl border border-lighter-navy bg-lighter-navy px-6 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80">Mehr erfahren</a>
-                </div>
-              </div>
-              <div class="relative order-2 lg:order-1">
-                <img src="images/PastrimAvull.jpg" alt="Professionelle Mitarbeiter bei der Arbeit" class="w-full max-w-5xl mx-auto rounded-[2rem] border border-lighter-navy object-cover shadow-[0_25px_80px_rgba(15,23,42,0.08)]" />
-              </div>
-            </div>
-          </div>
-        </section>
+    /* ── Vertical text ── */
+    .vertical-text {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      letter-spacing: 0.25em;
+      font-size: 0.6rem;
+      font-weight: 300;
+      color: #BD9A7A;
+      text-transform: uppercase;
+      user-select: none;
+    }
 
-      <main class="m-0 p-0">
-        <section id="features" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
-          <div class="reveal py-10 md:py-14">
-            <div class="reveal swipe-right text-center mb-12">
-              <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">Leistungen</p>
-              <h2 class="mt-4 text-2xl font-semibold tracking-[-0.72px] text-soft-gold md:text-3xl xl:text-4xl">Komplette Reinigung, Hausservice und Gartenpflege in Lahr aus einer Hand.</h2>
-              <p class="mt-6 max-w-2xl mx-auto text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Wir sorgen dafür, dass Ihr Zuhause oder Ihr Unternehmen sauber, frisch und hygienisch bleibt.</p>
-            </div>
-            <div class="grid gap-6 lg:grid-cols-3">
-              <div class="reveal rounded-[2rem] border border-lighter-navy bg-lighter-navy p-6 shadow-glow transition hover:-translate-y-2 hover:border-lighter-navy">
-                <div class="flex h-full flex-col justify-between gap-4">
-                  <div class="space-y-4">
-                    <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">REINIGUNGSDIENSTE (HOUSE CLEANING)</p>
-                    <h2 class="text-2xl font-semibold text-soft-gold">Hausreinigung, Wohnungsreinigung, Büroreinigung, Fensterreinigung, Einzugs- und Auszugsreinigung sowie Tiefenreinigung von Innenräumen in Lahr.</h2>
-                    <p class="text-muted-gray">Hausreinigung (regelmäßig und Tiefenreinigung), Büroreinigung, Einzugs- / Auszugsreinigung, Fensterreinigung sowie Boden- und Oberflächenreinigung.</p>
-                  </div>
-                  <img src="images/quality_restoration_20260418222950628.JPEG" alt="Reinigungsdienst" class="mt-4 h-56 w-full rounded-[1.75rem] object-cover" />
-                </div>
-              </div>
-              <div class="space-y-6 lg:col-span-2">
-                <div class="reveal rounded-[2rem] border border-lighter-navy bg-lighter-navy p-6 shadow-glow transition hover:-translate-y-2 hover:border-lighter-navy">
-                  <img src="images/Garazhda.jpg" alt="Gartenpflege" class="h-56 w-full rounded-[1.75rem] object-cover" />
-                </div>
-                <div class="grid gap-6 lg:grid-cols-3">
-                  <div class="reveal rounded-[2rem] border border-soft-gold bg-soft-gold p-6 shadow-glow transition hover:-translate-y-2 hover:border-soft-gold">
-                    <p class="text-sm uppercase tracking-[0.35em] text-deep-navy">AUSSENREINIGUNG</p>
-                    <h3 class="mt-4 text-xl font-semibold text-deep-navy">Hochdruckreinigung von Terrassen, Einfahrten, Wegen, Fassaden und stark verschmutzten Außenflächen.</h3>
-                    <p class="mt-3 text-deep-navy">Einfahrten, Wände und Terrassen erhalten eine gründliche Reinigung.</p>
-                  </div>
-                  <div class="reveal rounded-[2rem] border border-lighter-navy bg-lighter-navy p-6 shadow-glow transition hover:-translate-y-2 hover:border-lighter-navy">
-                    <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">STEIN- & FLÄCHENREINIGUNG</p>
-                    <h3 class="mt-4 text-xl font-semibold text-soft-gold">Professionelle Reinigung von Pflastersteinen, Gehwegen und Außenflächen für ein sauberes Erscheinungsbild.</h3>
-                    <p class="mt-3 text-muted-gray">Fachgerechtes Reinigen und Erneuern von Steinflächen und Außenbereichen.</p>
-                  </div>
-                  <div class="reveal rounded-[2rem] border border-soft-gold bg-soft-gold p-6 shadow-glow transition hover:-translate-y-2 hover:border-soft-gold">
-                    <p class="text-sm uppercase tracking-[0.35em] text-deep-navy">ABBRUCHARBEITEN</p>
-                    <h3 class="mt-4 text-xl font-semibold text-deep-navy">Kleine Abbrucharbeiten und Entfernung alter Strukturen mit professionellen Werkzeugen.</h3>
-                    <p class="mt-3 text-deep-navy">Professioneller Abbruch mit Hilti-Werkzeugen und Außenflächen-Vorbereitung.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+    /* ── Mobile hero bg image on title block ── */
+    /* ── Hero full-screen ── */
+    #hero {
+      min-height: 100svh;
+      background-image: url('https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=1600&q=90&fit=crop');
+      background-size: cover;
+      background-position: center 25%;
+    }
+    .mobile-body-below { display: none !important; }
 
-        <section id="galerie" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
-          <div class="reveal py-10 md:py-14">
-            <div class="text-center mb-10">
-              <p class="text-sm uppercase tracking-[0.35em] text-muted-gray">Galerie</p>
-              <h2 class="mt-4 text-[36px] font-semibold tracking-[-0.72px] text-soft-gold md:text-[44px] xl:text-[48px]">Unsere Arbeiten in Lahr</h2>
-              <p class="mt-6 max-w-2xl mx-auto text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Beispiele unserer Hausreinigung, Garagenreinigung, Gartenpflege und Außenarbeiten in Lahr und Umgebung.</p>
-            </div>
-            <div class="grid gap-6 sm:grid-cols-2">
-              <div class="reveal swipe-left overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-56 sm:h-[450px] lg:h-[350px]">
-                <img src="images/IMG_1664.JPG" alt="Galerie Bild 1" class="h-full w-full object-fill" />
-              </div>
-              <div class="reveal swipe-right overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-56 sm:h-[450px] lg:h-[350px]">
-                <img src="images/A7.jpg" alt="Galerie Bild 2" class="h-full w-full object-fill" />
-              </div>
-              <div class="reveal swipe-left overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-56 sm:h-[450px] lg:h-[350px]">
-                <img src="images/A5.jpeg" alt="Galerie Bild 3" class="h-full w-full object-fill" />
-              </div>
-              <div class="reveal swipe-right overflow-hidden rounded-[2rem] border border-lighter-navy bg-lighter-navy shadow-glow transition hover:-translate-y-1 h-56 sm:h-[450px] lg:h-[350px]">
-                <img src="images/A1.jpg" alt="Galerie Bild 4" class="h-full w-full object-fill" />
-              </div>
-            </div>
-          </div>
-        </section>
+    /* ── Gallery strip scrollbar hide ── */
+    #gallery-strip::-webkit-scrollbar { display: none; }
 
-        <section id="blog" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
-          <div class="reveal py-10 md:py-14 lg:py-16">
-            <div class="flex flex-wrap items-start justify-between gap-y-12 gap-x-20">
-              <div class="max-w-[760px] text-center sm:text-left">
-                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray">Aktuelles</p>
-                <h2 class="mt-4 text-[36px] font-semibold leading-[120%] tracking-[-0.72px] text-soft-gold md:text-[44px] xl:text-[48px]">Tipps & Projekte aus Lahr</h2>
-                <p class="mt-6 mb-[-14px] max-w-[760px] text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Erfahren Sie mehr über unsere aktuellen Projekte, Tipps zur Pflege Ihrer Außenanlagen und saisonale Serviceangebote in Lahr.</p>
-              </div>
-              <a href="#blog" class="hidden rounded-[8px] border border-lighter-navy bg-lighter-navy px-5 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80 lg:inline-flex">Mehr anzeigen</a>
-            </div>
+    /* ── Gallery: desktop 3-col grid ── */
+    @media (min-width: 768px) {
+      #gallery-strip {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-template-rows: auto auto !important;
+        gap: 1rem !important;
+        overflow: visible !important;
+        scroll-snap-type: none !important;
+        padding: 0 2rem !important;
+        cursor: default !important;
+        touch-action: auto !important;
+        padding-bottom: 0 !important;
+      }
+      .gallery-card {
+        flex-shrink: unset !important;
+        width: auto !important;
+        height: 360px !important;
+        scroll-snap-align: none !important;
+        scroll-snap-stop: unset !important;
+        margin: 0 !important;
+        transition: transform 0.45s cubic-bezier(.25,.8,.25,1), box-shadow 0.45s ease !important;
+      }
+      .gallery-card:hover {
+        transform: translateY(-6px) scale(1.02) !important;
+        box-shadow: 0 20px 48px rgba(0,0,0,0.2) !important;
+        z-index: 2;
+      }
+      /* Row 2 shorter */
+      .gallery-card:nth-child(4),
+      .gallery-card:nth-child(5),
+      .gallery-card:nth-child(6) { height: 300px !important; }
+    }
 
-            <div class="mt-12 grid gap-y-12 gap-x-8 md:grid-cols-2 xl:grid-cols-3">
-              <article class="reveal swipe-left flex flex-col rounded-[2rem] border border-lighter-navy bg-lighter-navy p-7 shadow-glow transition hover:-translate-y-1">
-                <img src="images/THYRJE ME HILT.jpg" alt="Reinigungsdienst" class="mb-5 h-[220px] w-full rounded-[1.75rem] object-cover md:h-[240px] xl:h-[280px]" />
-                <span class="inline-flex rounded-full bg-lighter-navy px-3 py-1 text-[14px] font-medium text-muted-gray">Kategorie</span>
-                <p class="mt-3 text-[14px] font-normal text-muted-gray">7 min Lesezeit</p>
-                <h3 class="mt-4 text-[20px] font-semibold leading-[140%] tracking-[-0.48px] text-soft-gold md:text-[24px]">Effektive Haus- und Wohnungsreinigung (Innen & Tiefenreinigung)</h3>
-                <a href="#" class="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-soft-gold/90 transition hover:text-soft-gold">Mehr lesen<span aria-hidden="true">→</span></a>
-              </article>
+    /* ── Swipe dots ── */
+    .swipe-dots { display: none; }
+    @media (max-width: 767px) {
+      .swipe-dots { display: flex; justify-content: center; gap: 6px; margin-top: 1.2rem; }
+      .swipe-dot {
+        width: 6px; height: 6px; border-radius: 50%;
+        background: #EAD8C7; transition: background 0.3s, transform 0.3s;
+      }
+      .swipe-dot.active { background: #BD9A7A; transform: scale(1.4); }
+    }
 
-              <article class="reveal swipe-right flex flex-col rounded-[2rem] border border-soft-gold bg-soft-gold p-7 shadow-glow transition hover:-translate-y-1">
-                <img src="images/KOSITJE BARI.jpg" alt="Gartenpflege" class="mb-5 h-[220px] w-full rounded-[1.75rem] object-cover md:h-[240px] xl:h-[280px]" />
-                <span class="inline-flex rounded-full bg-transparent px-3 py-1 text-[14px] font-medium text-deep-navy">Kategorie</span>
-                <p class="mt-3 text-[14px] font-normal text-deep-navy">7 min Lesezeit</p>
-                <h3 class="mt-4 text-[20px] font-semibold leading-[140%] tracking-[-0.48px] text-deep-navy md:text-[24px]">Garagenreinigung bei starker Verschmutzung</h3>
-                <a href="#" class="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-deep-navy transition hover:text-deep-navy/80">Mehr lesen<span aria-hidden="true">→</span></a>
-              </article>
+    /* ── Clip-path reveal ── */
+    .clip-reveal { clip-path: inset(0 100% 0 0); }
 
-              <article class="reveal swipe-left flex flex-col rounded-[2rem] border border-lighter-navy bg-lighter-navy p-7 shadow-glow transition hover:-translate-y-1">
-                <img src="images/LARJEMEPRESION.jpg" alt="Außenarbeiten" class="mb-5 h-[220px] w-full rounded-[1.75rem] object-cover md:h-[240px] xl:h-[280px]" />
-                <span class="inline-flex rounded-full bg-lighter-navy px-3 py-1 text-[14px] font-medium text-muted-gray">Kategorie</span>
-                <p class="mt-3 text-[14px] font-normal text-muted-gray">7 min Lesezeit</p>
-                <h3 class="mt-4 text-[20px] font-semibold leading-[140%] tracking-[-0.48px] text-soft-gold md:text-[24px]">Gartenpflege und saisonale Außenarbeiten in Lahr</h3>
-                <a href="#" class="mt-auto inline-flex items-center gap-2 text-[16px] font-medium text-soft-gold/90 transition hover:text-soft-gold">Mehr lesen<span aria-hidden="true">→</span></a>
-              </article>
-            </div>
+    /* ── Nav link hover ── */
+    .nav-link {
+      position: relative;
+      letter-spacing: 0.18em;
+      font-size: 0.72rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 0; height: 1px;
+      background: #BD9A7A;
+      transition: width 0.35s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
 
-            <a href="#blog" class="mt-8 inline-flex w-full items-center justify-center rounded-[8px] border border-lighter-navy bg-lighter-navy px-5 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80 lg:hidden">Mehr anzeigen</a>
-          </div>
-        </section>
+    /* ── Book Now btn ── */
+    .btn-book {
+      border: 1px solid #232323;
+      letter-spacing: 0.18em;
+      font-size: 0.65rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding: 0.55rem 1.4rem;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .btn-book:hover { background: #232323; color: #F9F5F0; }
 
-        <section id="allo" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
-          <div class="reveal py-10 md:py-14">
-            <div class="flex flex-wrap items-start justify-center gap-y-10 gap-x-20 sm:justify-between">
-              <div class="max-w-[760px] text-center sm:text-left">
-                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray">Warum wir</p>
-                <h2 class="mt-4 text-[36px] font-semibold leading-[120%] tracking-[-0.72px] text-soft-gold md:text-[44px] xl:text-[48px]">Ihr zuverlässiger Partner in Lahr</h2>
-                <p class="mt-6 max-w-[760px] text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Standort: Lahr, Deutschland. Wir arbeiten zuverlässig und pünktlich mit professionellen Werkzeugen für hochwertige und präzise Ergebnisse.</p>
-              </div>
-              <a href="#contact" class="rounded-[8px] border border-lighter-navy bg-lighter-navy px-5 py-3 text-sm font-semibold text-soft-gold transition hover:bg-lighter-navy/80">Kontakt</a>
-            </div>
-            <div class="mt-12 grid gap-6 lg:grid-cols-3">
-              <article class="reveal swipe-left rounded-[2rem] border border-soft-gold bg-soft-gold p-8 shadow-glow transition hover:-translate-y-1">
-                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 12h16" /><path d="M12 4v16" /></svg>
-                </div>
-                <p class="mt-6 text-sm uppercase tracking-[0.35em] text-deep-navy">ZUVERLÄSSIGKEIT</p>
-                <h3 class="mt-4 text-2xl font-semibold text-deep-navy">Pünktliche und sorgfältige Ausführung aller Arbeiten in Lahr.</h3>
-                <p class="mt-4 text-deep-navy">Wir sind termintreu und führen jede Aufgabe mit größter Sorgfalt aus.</p>
-              </article>
-              <article class="reveal swipe-right rounded-[2rem] border border-lighter-navy bg-lighter-navy p-8 shadow-glow transition hover:-translate-y-1">
-                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" /></svg>
-                </div>
-                <p class="mt-6 text-sm uppercase tracking-[0.35em] text-muted-gray">MODERNE AUSRÜSTUNG</p>
-                <h3 class="mt-4 text-2xl font-semibold text-soft-gold">Hochdruckreiniger, professionelle Reinigungsgeräte und Gartenwerkzeuge.</h3>
-                <p class="mt-4 text-muted-gray">Wir arbeiten mit modernen Geräten, darunter Hilti-Abbruchwerkzeuge und Hochdruckreiniger.</p>
-              </article>
-              <article class="reveal swipe-left rounded-[2rem] border border-soft-gold bg-soft-gold p-8 shadow-glow transition hover:-translate-y-1">
-                <div class="inline-flex h-12 w-12 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6"><path d="M12 5v14" /><path d="M5 12h14" /><path d="M5 19l2-2" /><path d="M17 7l2-2" /></svg>
-                </div>
-                <p class="mt-6 text-sm uppercase tracking-[0.35em] text-deep-navy">FAIRE PREISE</p>
-                <h3 class="mt-4 text-2xl font-semibold text-deep-navy">Transparente Preise ohne versteckte Kosten.</h3>
-                <p class="mt-4 text-deep-navy">Klar kalkulierte Angebote ohne versteckte Kosten und schnelle Kommunikation.</p>
-              </article>
-            </div>
-          </div>
-        </section>
+    /* ── Service card ── */
+    .service-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+    .service-card:hover .service-img { transform: scale(1.04); }
+    .service-card { overflow: hidden; }
 
-        <section id="faq" class="mx-auto max-w-[104rem] px-4 pb-12 sm:px-6 lg:px-8">
-          <div class="reveal rounded-[2rem] bg-lighter-navy px-6 py-8 shadow-[0_25px_80px_rgba(15,23,42,0.08)] sm:px-8 lg:px-10">
-            <div class="mx-auto max-w-7xl">
-              <div class="text-center">
-                <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray"></p>
-                <h2 class="mt-4 text-4xl font-semibold tracking-[-0.8px] text-soft-gold sm:text-5xl">VORHER UND NACHHER</h2>
-              </div>
-              <div class="mt-12 grid gap-4 sm:grid-cols-2">
-                <img src="images/GJEthe.jpg" alt="Reinigungsarbeiten" class="w-full rounded-[2rem] object-cover shadow-[0_25px_80px_rgba(15,23,42,0.08)] h-[360px] sm:h-[400px] md:h-[420px]" />
-                <img src="images/GJETHE (1).jpg" alt="Team bei der Arbeit" class="w-full rounded-[2rem] object-cover shadow-[0_25px_80px_rgba(15,23,42,0.08)] h-[360px] sm:h-[400px] md:h-[420px]" />
-              </div>
-            </div>
-          </div>
-        </section>
+    /* ── Thin divider ── */
+    .thin-line { border: none; border-top: 1px solid #EAD8C7; }
 
-        <section id="contact" class="mx-auto max-w-[104rem] px-4 pb-2 sm:px-6 lg:px-8">
-          <div class="reveal py-10 md:py-14">
-            <div class="text-center mb-12">
-              <p class="text-sm font-semibold uppercase tracking-[0.35em] text-muted-gray">Kontakt</p>
-              <h2 class="mt-4 text-2xl font-semibold tracking-[-0.72px] text-soft-gold md:text-3xl xl:text-4xl">Kostenloses Angebot anfordern</h2>
-              <p class="mt-6 max-w-2xl mx-auto text-[16px] leading-[150%] text-muted-gray md:text-[18px]">Erreichen Sie uns über E-Mail, Telefon oder besuchen Sie uns vor Ort in Lahr, Deutschland.</p>
-              <p class="mx-auto mt-4 max-w-2xl text-sm leading-6 text-soft-gold">Arbeitszeiten: Montag – Samstag 08:00 – 18:00</p>
-            </div>
-            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              <article class="reveal animate-left flex flex-col rounded-[2rem] border border-lighter-navy bg-lighter-navy p-7 shadow-glow transition hover:-translate-y-1">
-                <div class="flex items-center justify-center">
-                  <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-soft-gold text-deep-navy shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><path d="M4 4h16v16H4z" /><path d="M8 8h8" /><path d="M8 12h8" /></svg>
-                  </div>
-                </div>
-                <p class="mt-6 text-center text-sm uppercase tracking-[0.35em] text-muted-gray">E-Mail</p>
-                <h3 class="mt-4 text-center text-xl font-semibold text-soft-gold">hausgartenmeister1@gmail.com</h3>
-                <p class="mt-4 text-center text-sm leading-6 text-muted-gray">Schreiben Sie uns für Anfragen, Angebote oder Terminvereinbarungen.</p>
-              </article>
-              <article id="contact-middle" class="reveal flex flex-col rounded-[2rem] border border-soft-gold bg-soft-gold p-7 shadow-glow transition hover:-translate-y-1">
-                <div class="flex items-center justify-center">
-                  <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-lighter-navy text-soft-gold shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72 12.42 12.42 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L9 10.7a16 16 0 0 0 6.3 6.3l1.05-1.05a2 2 0 0 1 2.11-.45 12.42 12.42 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-                  </div>
-                </div>
-                <p class="mt-6 text-center text-sm uppercase tracking-[0.35em] text-deep-navy">Telefon</p>
-                <h3 class="mt-4 text-center text-xl font-semibold text-deep-navy">+49 162 5793601</h3>
-                <p class="mt-4 text-center text-sm leading-6 text-deep-navy">Rufen Sie uns an für Beratung, Termine oder ein kostenloses Angebot.</p>
-              </article>
-              <article class="reveal animate-right flex flex-col rounded-[2rem] border border-lighter-navy bg-lighter-navy p-7 shadow-glow transition hover:-translate-y-1">
-                <div class="flex items-center justify-center">
-                  <div class="inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-soft-gold text-deep-navy shadow-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-                  </div>
-                </div>
-                <p class="mt-6 text-center text-sm uppercase tracking-[0.35em] text-muted-gray">Standort</p>
-                <h3 class="mt-4 text-center text-xl font-semibold text-soft-gold">Lahr, Deutschland</h3>
-                <p class="mt-4 text-center text-sm leading-6 text-muted-gray">Wir sind Ihr lokaler Partner für Reinigung, Gartenpflege und Außenarbeiten.</p>
-              </article>
-            </div>
-          </div>
-        </section>
+    /* ── Newsletter form ── */
+    .nl-wrap {
+      display: flex;
+      align-items: stretch;
+      border: 1px solid #EAD8C7;
+      transition: border-color 0.3s ease;
+      max-width: 520px;
+    }
+    .nl-wrap:focus-within { border-color: #BD9A7A; }
+    .nl-input {
+      background: transparent;
+      border: none;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      color: #232323;
+      padding: 1rem 1.25rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .nl-input::placeholder { color: #BD9A7A; }
+    .nl-btn {
+      background: #232323;
+      color: #F9F5F0;
+      border: none;
+      padding: 0 1.6rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.3s ease;
+      flex-shrink: 0;
+    }
+    .nl-btn:hover { background: #BD9A7A; }
+    .nl-success {
+      display: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: #BD9A7A;
+      padding-top: 0.75rem;
+    }
 
-      </main>
+    /* ── Overlay tint on hero image ── */
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(35,35,35,0.08), rgba(35,35,35,0.22));
+      pointer-events: none;
+    }
 
-      <footer class="mx-auto max-w-[104rem] px-4 py-1 sm:px-6 lg:px-8 text-muted-gray">
-        <div class="rounded-[2rem] border border-lighter-navy bg-lighter-navy px-8 py-5 text-center shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
-          <p class="text-soft-gold font-semibold">Hausgarten Meister – Full Service Hausreinigung, Gartenpflege & Außenarbeiten in Lahr</p>
-          <p class="mt-4">Lahr, Deutschland</p>
-          <p class="mt-2">Telefon: +49 162 5793601</p>
-          <p class="mt-2">E-Mail: hausgartenmeister1@gmail.com</p>
-          <p class="mt-6 text-sm text-muted-gray">© 2026 Website Created By sk70342@universum-ks.org</p>
-        </div>
-      </footer>
+    /* ── Statement quote ── */
+    .quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 8rem;
+      line-height: 0.6;
+      color: #EAD8C7;
+      user-select: none;
+    }
+
+    /* ── Scroll indicator ── */
+    .scroll-line {
+      width: 1px;
+      height: 60px;
+      background: #BD9A7A;
+      animation: scrollPulse 1.8s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%,100% { opacity: 0.3; transform: scaleY(1); }
+      50%      { opacity: 1;   transform: scaleY(1.15); }
+    }
+
+    /* ── Masonry grid ── */
+    .masonry {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      gap: 1.25rem;
+    }
+    .ms-a { grid-column: 1 / 6;  grid-row: 1 / 3; height: 560px; }
+    .ms-b { grid-column: 6 / 10; grid-row: 1 / 2; height: 260px; }
+    .ms-c { grid-column: 10 / 13;grid-row: 1 / 2; height: 260px; }
+    .ms-d { grid-column: 6 / 10; grid-row: 2 / 3; height: 280px; }
+    .ms-e { grid-column: 10 / 13;grid-row: 2 / 3; height: 280px; }
+
+    @media (min-width: 768px) {
+      .filozofia-img-panel { min-height: 0 !important; height: auto !important; max-height: none !important; }
+    }
+    .services-section { padding-top: 4rem; padding-bottom: 4rem; }
+    @media (min-width: 768px) {
+      .services-section { padding-top: 12rem; padding-bottom: 12rem; }
+    }
+    @media (max-width: 768px) {
+      .masonry { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .ms-a,.ms-b,.ms-c,.ms-d,.ms-e { grid-column: auto; grid-row: auto; height: 220px; }
+      .ms-f { grid-column: auto; grid-row: auto; height: 220px; }
+    }
+  </style>
+</head>
+
+<body class="bg-linen text-charcoal">
+
+  <!-- ─────────────────────────────────────────────────────────────
+       NAVIGATION
+  ───────────────────────────────────────────────────────────── -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50" style="background: rgba(44,28,16,0.22); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease;">
+
+    <!-- Top micro line -->
+    <div style="height:1px; background: linear-gradient(to right, transparent, rgba(189,154,122,0.6), transparent);"></div>
+
+    <!-- Main nav row -->
+    <div class="px-8 md:px-14 flex items-center justify-between" style="height:62px;">
+
+      <!-- Left links (desktop) -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#services" class="nav-link">Studio</a>
+        <span style="width:3px; height:3px; border-radius:50%; background:rgba(189,154,122,0.5); display:inline-block;"></span>
+        <a href="#services" class="nav-link">Shërbime</a>
+      </div>
+
+      <!-- Logo — centered absolute on desktop, left on mobile -->
+      <a href="#" class="md:absolute md:left-1/2 md:-translate-x-1/2 font-serif" style="letter-spacing:0.22em; color:#F9F5F0; font-weight:500; font-size:1.05rem; white-space:nowrap;">
+        Studio<em style="font-style:italic; color:#BD9A7A; font-weight:300;"> Eli</em>
+      </a>
+
+      <!-- Right: link + CTA (desktop) / hamburger (mobile) -->
+      <div class="flex items-center gap-8">
+        <a href="#galeria" class="nav-link hidden md:block">Galeria</a>
+        <a href="#footer" class="hidden md:inline-flex font-sans uppercase tracking-widest" style="font-size:0.52rem; letter-spacing:0.35em; color:#232323; background:#BD9A7A; border-radius:99px; padding:0.45rem 1.2rem;">Rezervo Tani</a>
+
+        <!-- Mobile hamburger -->
+        <button id="mob-menu-btn" class="md:hidden flex flex-col gap-1.5 z-50" aria-label="Menu">
+          <span id="bar1" class="block w-6 h-px transition-all duration-300" style="background:#F9F5F0;"></span>
+          <span id="bar2" class="block w-4 h-px transition-all duration-300" style="background:#BD9A7A;"></span>
+          <span id="bar3" class="block w-6 h-px transition-all duration-300" style="background:#F9F5F0;"></span>
+        </button>
+      </div>
 
     </div>
 
-    <script>
-      const revealElements = document.querySelectorAll('.reveal, .section-block, .hero-text, .hero-image');
-      const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
+    <!-- Bottom border line -->
+    <div style="height:1px; background: linear-gradient(to right, transparent, rgba(189,154,122,0.35), transparent);"></div>
+
+  </nav>
+
+  <!-- Mobile menu panel -->
+  <div id="mob-menu" class="fixed inset-0 z-40 md:hidden transition-all duration-500" style="opacity:0; pointer-events:none; background: linear-gradient(160deg, #EAD8C7 0%, #BD9A7A 50%, #EAD8C7 100%);">
+    <!-- Top taupe accent bar -->
+    <div style="position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(to right, #F9F5F0, #EAD8C7, #F9F5F0);"></div>
+    <!-- Soft overlay to keep it warm not harsh -->
+    <div class="absolute inset-0 pointer-events-none" style="background: rgba(249,245,240,0.35);"></div>
+    <!-- Diagonal texture -->
+    <div class="absolute inset-0 pointer-events-none" style="background-image: repeating-linear-gradient(135deg, rgba(249,245,240,0.08) 0px, rgba(249,245,240,0.08) 1px, transparent 1px, transparent 40px);"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full gap-0 px-8">
+      <!-- Links -->
+      <div class="flex flex-col items-center gap-2 mb-10">
+        <a href="#" onclick="closeMobMenu()" class="group flex flex-col items-center">
+          <span class="font-sans uppercase tracking-widest mb-1" style="font-size:0.42rem; letter-spacing:0.5em; color:#BD9A7A;">01</span>
+          <span class="font-serif transition-colors group-hover:text-[#BD9A7A]" style="font-size:3rem; letter-spacing:0.04em; color:#232323; font-weight:400; line-height:1.1;">Studio</span>
+        </a>
+        <div style="width:1px; height:20px; background:rgba(189,154,122,0.25);"></div>
+        <a href="#services" onclick="closeMobMenu()" class="group flex flex-col items-center">
+          <span class="font-sans uppercase tracking-widest mb-1" style="font-size:0.42rem; letter-spacing:0.5em; color:#BD9A7A;">02</span>
+          <span class="font-serif transition-colors group-hover:text-[#BD9A7A]" style="font-size:3rem; letter-spacing:0.04em; color:#232323; font-weight:400; line-height:1.1;">Shërbime</span>
+        </a>
+        <div style="width:1px; height:20px; background:rgba(189,154,122,0.25);"></div>
+        <a href="#galeria" onclick="closeMobMenu()" class="group flex flex-col items-center">
+          <span class="font-sans uppercase tracking-widest mb-1" style="font-size:0.42rem; letter-spacing:0.5em; color:#BD9A7A;">03</span>
+          <span class="font-serif transition-colors group-hover:text-[#BD9A7A]" style="font-size:3rem; letter-spacing:0.04em; color:#232323; font-weight:400; line-height:1.1;">Galeria</span>
+        </a>
+      </div>
+      <!-- CTA -->
+      <a href="#footer" onclick="closeMobMenu()" class="font-sans uppercase tracking-widest" style="font-size:0.6rem; letter-spacing:0.35em; color:#232323; background:#BD9A7A; padding:0.9rem 2.2rem; border-radius:99px;">Rezervo Tani</a>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────────────────────────────
+       HERO — full-screen cinematic
+  ───────────────────────────────────────────────────────────── -->
+  <section id="hero" class="relative overflow-hidden flex flex-col">
+
+    <!-- Warm linen tint over photo -->
+    <div class="absolute inset-0 pointer-events-none z-10" style="background: rgba(189,154,122,0.08);"></div>
+    <!-- Dark gradient vignette (warm brown) -->
+    <div class="absolute inset-0 pointer-events-none z-10" style="background: linear-gradient(to bottom, rgba(40,22,10,0.42) 0%, transparent 38%, transparent 52%, rgba(40,22,10,0.75) 100%);"></div>
+    <!-- Side vignettes (warm) -->
+    <div class="absolute inset-0 pointer-events-none z-10" style="background: linear-gradient(to right, rgba(40,22,10,0.28) 0%, transparent 30%, transparent 70%, rgba(40,22,10,0.18) 100%);"></div>
+
+    <!-- Vertical left accent -->
+    <div class="absolute left-5 top-1/2 -translate-y-1/2 z-20 hidden lg:block">
+      <span class="vertical-text">Themeluar 2026 — Studio Eli</span>
+    </div>
+    <!-- Vertical right accent -->
+    <div class="absolute right-5 top-1/2 -translate-y-1/2 z-20 hidden lg:block">
+      <span class="vertical-text" style="writing-mode: vertical-lr;">Luksoz · Ritual · Zeje</span>
+    </div>
+
+    <!-- Centre content -->
+    <div class="relative z-20 flex flex-col items-center justify-center flex-1 text-center px-8" style="min-height:100svh; padding-top:80px; padding-bottom:160px;">
+
+
+      <!-- Main title -->
+      <h1 id="hero-title" class="font-serif leading-none mb-6" style="font-size: clamp(4.5rem, 15vw, 9rem); font-weight:400; opacity:0; color:#F9F5F0; letter-spacing:-0.03em; text-shadow: 0 4px 32px rgba(0,0,0,0.3);">
+        Studio<br/><em style="font-style:italic; color:#BD9A7A; font-weight:300;">Eli.</em>
+      </h1>
+
+      <!-- Subtitle -->
+      <p id="hero-body" class="font-sans font-light mb-12 mx-auto" style="font-size: clamp(0.78rem, 2vw, 0.95rem); letter-spacing:0.08em; color:rgba(249,245,240,0.92); opacity:0; max-width:42ch; line-height:1.85; text-shadow: 0 1px 6px rgba(0,0,0,0.5);">
+        Aty ku rituali luksoz takohet me bukurinë skulpturore.  ·  Projektuar për individin e zgjedhur.
+      </p>
+
+      <!-- CTA row -->
+      <div id="hero-cta" class="flex items-center gap-6" style="opacity:0;">
+        <a href="#services" class="font-sans uppercase tracking-widest" style="font-size:0.6rem; letter-spacing:0.32em; color:#232323; background:#BD9A7A; padding:0.85rem 1.8rem; border-radius:99px;">Zbulo Shërbimet</a>
+        <a href="#footer" class="font-sans uppercase tracking-widest" style="font-size:0.6rem; letter-spacing:0.32em; color:#F9F5F0; border:1px solid rgba(189,154,122,0.65); padding:0.85rem 1.8rem; border-radius:99px;">Rezervo</a>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────
+       SERVICES GRID
+  ───────────────────────────────────────────────────────────── -->
+  <section id="services" class="relative px-6 md:px-20 lg:px-28 services-section">
+
+    <!-- Mobile intro text -->
+    <div class="md:hidden text-center mb-10">
+      <p class="font-serif font-light leading-relaxed mx-auto" style="font-size:1rem; letter-spacing:0.03em; color:#232323; max-width:28ch;">
+        Aty ku rituali luksoz takohet me bukurinë skulpturore. Çdo takim është një përvojë e kuruar, projektuar për individin e zgjedhur.
+      </p>
+      <div style="width:2rem; height:1px; background:#BD9A7A; margin: 1.5rem auto 0;"></div>
+    </div>
+
+    <!-- Section header -->
+    <div class="flex items-end justify-between mb-16">
+      <div class="w-full md:w-auto text-center md:text-left">
+        <p class="reveal-text font-sans text-taupe uppercase tracking-widest text-xs mb-4" style="letter-spacing:0.3em;">Ofertat Tona</p>
+        <h2 class="reveal-text font-serif leading-none" style="font-size: clamp(2.8rem, 5vw, 4.5rem);">
+          Të Zgjedhura<br /><em style="color:#BD9A7A;">Shërbime</em>
+        </h2>
+      </div>
+      <p class="reveal-text hidden md:block font-sans font-light text-sm text-taupe max-w-xs text-right" style="letter-spacing:0.05em; line-height:1.8;">
+        Çdo trajtim është një dialog shqisor midis zejes dhe qëllimit.
+      </p>
+    </div>
+
+    <hr class="thin-line mb-16" />
+
+    <!-- Asymmetric masonry grid -->
+    
+    <div class="masonry">
+
+      <!-- Card A — tall -->
+      <div class="ms-a service-card relative">
+        <img
+          data-parallax
+          src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=900&q=80&fit=crop"
+          alt="Facial treatment"
+          class="service-img"
+        />
+        <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/50 to-transparent">
+          <span class="font-sans text-white/50 text-xs tracking-widest">01</span>
+          <h3 class="font-serif text-white text-2xl mt-1 leading-tight">FACIAL<br />SIGNATURE</h3>
+        </div>
+      </div>
+
+      <!-- Card B -->
+      <div class="ms-b service-card relative">
+        <img
+          data-parallax
+          src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=800&q=80&fit=crop"
+          alt="Body ritual"
+          class="service-img"
+        />
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent">
+          <span class="font-sans text-white/50 text-xs tracking-widest">02</span>
+          <h3 class="font-serif text-white text-xl mt-1 leading-tight">RITUAL<br />TRUPIT</h3>
+        </div>
+      </div>
+
+      <!-- Card C -->
+      <div class="ms-c service-card relative">
+        <img
+          data-parallax
+          src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=700&q=80&fit=crop"
+          alt="Brow and lash"
+          class="service-img"
+        />
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent">
+          <span class="font-sans text-white/50 text-xs tracking-widest">03</span>
+          <h3 class="font-serif text-white text-xl mt-1 leading-tight">VETULLA &<br />QERPIKË</h3>
+        </div>
+      </div>
+
+      <!-- Card D -->
+      <div class="ms-d service-card relative">
+        <img
+          data-parallax
+          src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80&fit=crop"
+          alt="Scalp therapy"
+          class="service-img"
+        />
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent">
+          <span class="font-sans text-white/50 text-xs tracking-widest">04</span>
+          <h3 class="font-serif text-white text-xl mt-1 leading-tight">TERAPI<br />LËKURE</h3>
+        </div>
+      </div>
+
+      <!-- Card E -->
+      <div class="ms-e service-card relative">
+        <img
+          data-parallax
+          src="https://images.unsplash.com/photo-1583241475880-083f84372725?w=700&q=80&fit=crop"
+          alt="Hand ritual"
+          class="service-img"
+        />
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent">
+          <span class="font-sans text-white/50 text-xs tracking-widest">05</span>
+          <h3 class="font-serif text-white text-xl mt-1 leading-tight">RITUAL<br />DUARVE</h3>
+        </div>
+      </div>
+
+      <!-- Card F — mobile only, white accent card -->
+      <div class="ms-f service-card relative md:hidden" style="background:#ffffff;">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 24 24" fill="none" stroke="#BD9A7A" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6" cy="6" r="3"/>
+            <circle cx="6" cy="18" r="3"/>
+            <line x1="20" y1="4" x2="8.12" y2="15.88"/>
+            <line x1="14.47" y1="14.48" x2="20" y2="20"/>
+            <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+          </svg>
+        </div>
+      </div>
+
+    </div><!-- /masonry -->
+
+    <!-- View all link -->
+    <!-- Desktop: line + link -->
+    <div class="hidden md:flex mt-12 items-center gap-4">
+      <hr class="thin-line flex-1" />
+      <a href="#" class="font-sans text-xs uppercase tracking-widest text-taupe hover:text-charcoal transition-colors" style="letter-spacing:0.25em; white-space:nowrap;">
+        Shiko Të Gjitha Shërbimet →
+      </a>
+    </div>
+    <!-- Mobile: full-width elegant button -->
+    <div class="md:hidden mt-10 flex justify-center">
+      <a href="#" class="inline-flex items-center gap-3 font-sans uppercase tracking-widest text-charcoal transition-colors" style="font-size:0.7rem; letter-spacing:0.28em; border-bottom: 1px solid #BD9A7A; padding-bottom: 0.5rem;">
+        Shiko Të Gjitha Shërbimet
+        <span style="color:#BD9A7A; font-size:1rem;">→</span>
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ─────────────────────────────────────────────────────────────
+       EDITORIAL MANIFESTO STRIP
+  ───────────────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden" style="background:#F9F5F0; padding: 7rem 0;">
+
+    <!-- Faint taupe diagonal texture -->
+    <div class="absolute inset-0 pointer-events-none" style="background: repeating-linear-gradient(135deg, transparent, transparent 80px, rgba(189,154,122,0.04) 80px, rgba(189,154,122,0.04) 81px);"></div>
+
+    <div class="relative z-10 px-8 md:px-20 lg:px-28">
+
+      <!-- Big split headline -->
+      <div class="mb-14">
+        <p class="font-sans uppercase tracking-widest mb-5" style="font-size:0.6rem; letter-spacing:0.45em; color:#BD9A7A;">— Manifesto</p>
+        <h2 class="font-serif leading-none" style="font-size: clamp(2.8rem, 7vw, 6.5rem); color:#232323; font-weight:400; letter-spacing:-0.03em;">
+          Bukuria nuk është<br/>
+          <em style="font-style:italic; color:#BD9A7A; font-weight:300;">aksident.</em>
+        </h2>
+      </div>
+
+      <!-- Thin taupe rule -->
+      <div style="height:1px; background: linear-gradient(to right, #BD9A7A, rgba(189,154,122,0.15)); margin-bottom: 4rem;"></div>
+
+      <!-- Three pillars — bordered on all screens -->
+      <div class="grid grid-cols-1 md:grid-cols-3" style="border-top:1px solid #EAD8C7;">
+
+        <!-- Pillar 1 -->
+        <div class="relative py-10 pr-4 md:py-12 md:pr-16" style="border-bottom:1px solid #EAD8C7; border-right:1px solid #EAD8C7;">
+          <span class="font-serif absolute top-6 right-4 select-none" style="font-size:4.5rem; line-height:1; color:rgba(234,216,199,0.2); font-weight:700;">01</span>
+          <p class="font-sans uppercase tracking-widest mb-4" style="font-size:0.55rem; letter-spacing:0.4em; color:#BD9A7A;">Zeje</p>
+          <p class="font-serif" style="font-size:1.05rem; color:#232323; line-height:1.65; font-weight:300; max-width:28ch;">Çdo lëvizje është e studiuar. Çdo detail, i qëllimshëm.</p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="relative py-10 pr-4 md:py-12 md:px-16" style="border-bottom:1px solid #EAD8C7; border-right:1px solid #EAD8C7;">
+          <span class="font-serif absolute top-6 right-4 select-none" style="font-size:4.5rem; line-height:1; color:rgba(234,216,199,0.2); font-weight:700;">02</span>
+          <p class="font-sans uppercase tracking-widest mb-4" style="font-size:0.55rem; letter-spacing:0.4em; color:#BD9A7A;">Ritual</p>
+          <p class="font-serif" style="font-size:1.05rem; color:#232323; line-height:1.65; font-weight:300; max-width:28ch;">Koha që kalon me ne është kohë e investuar në veten tuaj.</p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="relative py-10 pr-4 md:py-12 md:pl-16" style="border-bottom:1px solid #EAD8C7; border-right:1px solid #EAD8C7;">
+          <span class="font-serif absolute top-6 right-4 select-none" style="font-size:4.5rem; line-height:1; color:rgba(234,216,199,0.2); font-weight:700;">03</span>
+          <p class="font-sans uppercase tracking-widest mb-4" style="font-size:0.55rem; letter-spacing:0.4em; color:#BD9A7A;">Liri</p>
+          <p class="font-serif" style="font-size:1.05rem; color:#232323; line-height:1.65; font-weight:300; max-width:28ch;">Bukuria e vërtetë lind kur ndihesh krejtësisht ti vetë.</p>
+        </div>
+
+      </div>
+
+      <!-- Full-width tagline bottom -->
+      <div class="pt-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <p class="font-serif" style="font-size: clamp(0.95rem, 1.8vw, 1.25rem); color:#BD9A7A; font-style:italic; font-weight:300; letter-spacing:0.01em;">
+          "Aty ku rituali luksoz takohet me bukurinë skulpturore."
+        </p>
+        <div class="flex items-center gap-3">
+          <div style="width:2rem; height:1px; background:#EAD8C7;"></div>
+          <p class="font-sans uppercase tracking-widest" style="font-size:0.5rem; letter-spacing:0.4em; color:#EAD8C7;">Studio Eli · 2026</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────
+       FILOZOFIA — split image + text section
+  ───────────────────────────────────────────────────────────── -->
+  <section id="filozofia" class="relative overflow-hidden" style="background:#F9F5F0;">
+
+    <div class="flex flex-col md:flex-row md:items-stretch">
+
+      <!-- LEFT: text -->
+      <div class="filozofia-text relative flex flex-col justify-center px-8 md:px-16 lg:px-24 py-20 md:py-28 md:w-1/2 overflow-hidden">
+
+        <!-- Faint large letter -->
+        <div class="absolute -bottom-8 -left-4 select-none pointer-events-none font-serif" style="font-size:22rem; line-height:1; color:rgba(189,154,122,0.06); font-weight:700;">F</div>
+
+        <!-- Eyebrow -->
+        <div class="filozofia-el flex items-center gap-4 mb-8">
+          <div style="width:2rem; height:1px; background:#BD9A7A;"></div>
+          <p class="font-sans uppercase tracking-widest" style="font-size:0.58rem; letter-spacing:0.42em; color:#BD9A7A;">Filozofia Jonë</p>
+        </div>
+
+        <!-- Headline -->
+        <h2 class="filozofia-el font-serif leading-tight mb-8" style="font-size: clamp(2.2rem, 4.5vw, 4rem); color:#232323; font-weight:400; letter-spacing:-0.02em;">
+          Bukuria si një<br/><em style="color:#BD9A7A; font-style:italic; font-weight:300;">Praktikë Ditore</em>
+        </h2>
+
+        <!-- Body -->
+        <p class="filozofia-el font-sans font-light leading-relaxed mb-6" style="font-size:0.92rem; color:#BD9A7A; max-width:44ch; line-height:1.85; letter-spacing:0.03em;">
+          Besojmë se bukuria nuk është një destinacion, por një ritual — një akt i vetëdijshëm i kujdesit personal që rinovon shpirtin dhe rikthen qartësinë. Çdo detaj i studios sonë është krijuar për të nxitur këtë qëllim.
+        </p>
+
+        <p class="filozofia-el font-serif font-light leading-relaxed mb-12" style="font-size:1rem; color:#232323; max-width:40ch; line-height:1.7; font-style:italic;">
+          Praktikuesit tanë janë artizanë, të trajnuar në filozofinë se teknika dhe prekja janë të pandashme.
+        </p>
+
+        <!-- Stat block -->
+        <div class="filozofia-el flex items-center gap-8">
+          <div>
+            <p class="font-serif" style="font-size:2.8rem; color:#232323; font-weight:400; line-height:1;">10+</p>
+            <p class="font-sans uppercase tracking-widest mt-1" style="font-size:0.52rem; letter-spacing:0.38em; color:#BD9A7A;">Vite Ekselencë</p>
+          </div>
+          <div style="width:1px; height:3rem; background:#EAD8C7;"></div>
+          <div>
+            <a href="#" class="font-sans uppercase tracking-widest flex items-center gap-2 group" style="font-size:0.6rem; letter-spacing:0.35em; color:#232323; border-bottom:1px solid #EAD8C7; padding-bottom:0.4rem;">
+              Historia Jonë
+              <span style="color:#BD9A7A; transition: transform 0.3s;" class="group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: image -->
+      <div class="filozofia-img relative md:w-1/2 overflow-hidden filozofia-img-panel" style="min-height:50vw;">
+        <img
+          src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=85&fit=crop"
+          alt="Studio interior"
+          class="absolute inset-0 w-full h-full object-cover"
+          style="object-position: center; filter: sepia(12%) saturate(90%) brightness(0.96);"
+        />
+        <!-- Linen fade on left edge to blend with text panel -->
+        <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(247,240,230,0.35) 0%, transparent 30%);"></div>
+        <!-- Floating badge -->
+        <div class="filozofia-badge absolute bottom-10 left-8 md:left-10" style="background:rgba(247,240,230,0.92); backdrop-filter:blur(8px); padding:1.25rem 1.5rem; border-left:2px solid #BD9A7A;">
+          <p class="font-sans uppercase tracking-widest mb-1" style="font-size:0.5rem; letter-spacing:0.4em; color:#BD9A7A;">Studio Eli</p>
+          <p class="font-serif" style="font-size:1rem; color:#232323; font-weight:400;">Tiranë, Shqipëri</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────
+       SECTION: MOMENTI — horizontal cinematic strip
+  ───────────────────────────────────────────────────────────── -->
+  <section id="galeria" class="relative overflow-hidden" style="background:#F9F5F0; padding-top: 8rem; padding-bottom: 5rem;">
+
+    <!-- Top border line -->
+    <div class="px-10 md:px-20 lg:px-28 mb-12">
+      <div style="height:1px; background: linear-gradient(to right, #BD9A7A, rgba(189,154,122,0.1));"></div>
+    </div>
+
+    <!-- Section header -->
+    <div class="px-10 md:px-20 lg:px-28 mb-14">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+
+        <!-- Left: label + heading -->
+        <div class="relative">
+          <!-- Ghost number desktop -->
+          <span class="hidden md:block absolute -top-8 -left-2 font-serif select-none pointer-events-none" style="font-size:9rem; line-height:1; color:rgba(189,154,122,0.07); font-weight:700;">G</span>
+          <p class="reveal-text font-sans uppercase tracking-widest mb-3" style="font-size:0.58rem; letter-spacing:0.45em; color:#BD9A7A;">— Galeria</p>
+          <h2 class="reveal-text font-serif leading-none" style="font-size: clamp(2.6rem, 5vw, 4.5rem); color:#232323; font-weight:400; letter-spacing:-0.02em;">
+            Çdo <em style="color:#BD9A7A; font-style:italic; font-weight:300;">Moment</em>
+          </h2>
+        </div>
+
+        <!-- Right: description + link (desktop only) -->
+        <div class="hidden md:flex flex-col items-end gap-5">
+          <p class="reveal-text font-sans font-light text-xs text-right" style="letter-spacing:0.06em; line-height:2; color:#BD9A7A; max-width:200px;">
+            Imazhe nga brenda studios sonë.<br/>Çdo kornizë, një histori.
+          </p>
+          <a href="#" class="reveal-text font-sans uppercase tracking-widest flex items-center gap-2" style="font-size:0.55rem; letter-spacing:0.38em; color:#232323; border-bottom:1px solid #EAD8C7; padding-bottom:0.35rem;">
+            Shiko të gjitha
+            <span style="color:#BD9A7A;">→</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Cinematic strip — swipe on mobile, grid on desktop -->
+    <div id="gallery-strip" class="flex gap-3 overflow-x-auto pb-4"
+      style="scrollbar-width:none; -ms-overflow-style:none; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; touch-action: pan-x; overscroll-behavior-x: contain; cursor: grab; padding-left: 10vw; padding-right: 10vw;">
+
+      <!-- Card 1 -->
+      <div class="gallery-card relative flex-shrink-0 overflow-hidden group" style="width: min(78vw, 320px); height: clamp(300px, 68vw, 480px); scroll-snap-align: center; scroll-snap-stop: always; border-radius: 1.25rem;">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=85&fit=crop"
+          alt="Studio moment 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" style="filter:saturate(0.9) brightness(0.97);" />
+        <!-- Warm tinted overlay -->
+        <div class="absolute inset-0" style="background: linear-gradient(160deg, rgba(189,154,122,0.08) 0%, transparent 40%, rgba(35,35,35,0.78) 100%);"></div>
+        <!-- Top pill badge -->
+        <div class="absolute top-4 left-4" style="background:rgba(249,245,240,0.18); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.2); border-radius:99px; padding:0.3rem 0.75rem;">
+          <p class="font-sans uppercase tracking-widest text-white" style="font-size:0.45rem; letter-spacing:0.35em;">Bukuria</p>
+        </div>
+        <!-- Bottom info -->
+        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+          <div>
+            <p class="font-serif text-white font-light mb-0.5" style="font-size:1.05rem; letter-spacing:0.04em;">Studio Eli</p>
+            <p class="font-sans text-white/45 uppercase tracking-widest" style="font-size:0.42rem; letter-spacing:0.3em;">2026</p>
+          </div>
+          <span class="font-serif select-none" style="font-size:2.8rem; line-height:1; font-weight:700; color:rgba(255,255,255,0.1); letter-spacing:-0.04em;">01</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="gallery-card relative flex-shrink-0 overflow-hidden group" style="width: min(78vw, 320px); height: clamp(300px, 68vw, 480px); scroll-snap-align: center; scroll-snap-stop: always; border-radius: 1.25rem;">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=85&fit=crop"
+          alt="Studio moment 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" style="filter:saturate(0.9) brightness(0.97);" />
+        <div class="absolute inset-0" style="background: linear-gradient(160deg, rgba(189,154,122,0.08) 0%, transparent 40%, rgba(35,35,35,0.78) 100%);"></div>
+        <div class="absolute top-4 left-4" style="background:rgba(249,245,240,0.18); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.2); border-radius:99px; padding:0.3rem 0.75rem;">
+          <p class="font-sans uppercase tracking-widest text-white" style="font-size:0.45rem; letter-spacing:0.35em;">Kujdesi</p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+          <div>
+            <p class="font-serif text-white font-light mb-0.5" style="font-size:1.05rem; letter-spacing:0.04em;">Ritual</p>
+            <p class="font-sans text-white/45 uppercase tracking-widest" style="font-size:0.42rem; letter-spacing:0.3em;">Çdo ditë</p>
+          </div>
+          <span class="font-serif select-none" style="font-size:2.8rem; line-height:1; font-weight:700; color:rgba(255,255,255,0.1); letter-spacing:-0.04em;">02</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="gallery-card relative flex-shrink-0 overflow-hidden group" style="width: min(78vw, 320px); height: clamp(300px, 68vw, 480px); scroll-snap-align: center; scroll-snap-stop: always; border-radius: 1.25rem;">
+        <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=900&q=85&fit=crop"
+          alt="Studio moment 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" style="filter:saturate(0.9) brightness(0.97);" />
+        <div class="absolute inset-0" style="background: linear-gradient(160deg, rgba(189,154,122,0.08) 0%, transparent 40%, rgba(35,35,35,0.78) 100%);"></div>
+        <div class="absolute top-4 left-4" style="background:rgba(249,245,240,0.18); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.2); border-radius:99px; padding:0.3rem 0.75rem;">
+          <p class="font-sans uppercase tracking-widest text-white" style="font-size:0.45rem; letter-spacing:0.35em;">Stili</p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+          <div>
+            <p class="font-serif text-white font-light mb-0.5" style="font-size:1.05rem; letter-spacing:0.04em;">Elegancë</p>
+            <p class="font-sans text-white/45 uppercase tracking-widest" style="font-size:0.42rem; letter-spacing:0.3em;">Pa kompromis</p>
+          </div>
+          <span class="font-serif select-none" style="font-size:2.8rem; line-height:1; font-weight:700; color:rgba(255,255,255,0.1); letter-spacing:-0.04em;">03</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="gallery-card relative flex-shrink-0 overflow-hidden group" style="width: min(78vw, 320px); height: clamp(300px, 68vw, 480px); scroll-snap-align: center; scroll-snap-stop: always; border-radius: 1.25rem;">
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=900&q=85&fit=crop"
+          alt="Studio moment 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" style="filter:saturate(0.9) brightness(0.97);" />
+        <div class="absolute inset-0" style="background: linear-gradient(160deg, rgba(189,154,122,0.08) 0%, transparent 40%, rgba(35,35,35,0.78) 100%);"></div>
+        <div class="absolute top-4 left-4" style="background:rgba(249,245,240,0.18); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.2); border-radius:99px; padding:0.3rem 0.75rem;">
+          <p class="font-sans uppercase tracking-widest text-white" style="font-size:0.45rem; letter-spacing:0.35em;">Arti</p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+          <div>
+            <p class="font-serif text-white font-light mb-0.5" style="font-size:1.05rem; letter-spacing:0.04em;">Precizion</p>
+            <p class="font-sans text-white/45 uppercase tracking-widest" style="font-size:0.42rem; letter-spacing:0.3em;">Çdo detaj</p>
+          </div>
+          <span class="font-serif select-none" style="font-size:2.8rem; line-height:1; font-weight:700; color:rgba(255,255,255,0.1); letter-spacing:-0.04em;">04</span>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="gallery-card relative flex-shrink-0 overflow-hidden group" style="width: min(78vw, 320px); height: clamp(300px, 68vw, 480px); scroll-snap-align: center; scroll-snap-stop: always; border-radius: 1.25rem;">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=900&q=85&fit=crop"
+          alt="Studio moment 5" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" style="filter:saturate(0.9) brightness(0.97);" />
+        <div class="absolute inset-0" style="background: linear-gradient(160deg, rgba(189,154,122,0.08) 0%, transparent 40%, rgba(35,35,35,0.78) 100%);"></div>
+        <div class="absolute top-4 left-4" style="background:rgba(249,245,240,0.18); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.2); border-radius:99px; padding:0.3rem 0.75rem;">
+          <p class="font-sans uppercase tracking-widest text-white" style="font-size:0.45rem; letter-spacing:0.35em;">Eleganca</p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+          <div>
+            <p class="font-serif text-white font-light mb-0.5" style="font-size:1.05rem; letter-spacing:0.04em;">Luksoz</p>
+            <p class="font-sans text-white/45 uppercase tracking-widest" style="font-size:0.42rem; letter-spacing:0.3em;">E veçantë</p>
+          </div>
+          <span class="font-serif select-none" style="font-size:2.8rem; line-height:1; font-weight:700; color:rgba(255,255,255,0.1); letter-spacing:-0.04em;">05</span>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="gallery-card relative flex-shrink-0 overflow-hidden group" style="width: min(78vw, 320px); height: clamp(300px, 68vw, 480px); scroll-snap-align: center; scroll-snap-stop: always; border-radius: 1.25rem;">
+        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=900&q=85&fit=crop"
+          alt="Studio moment 6" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108" style="filter:saturate(0.9) brightness(0.97);" />
+        <div class="absolute inset-0" style="background: linear-gradient(160deg, rgba(189,154,122,0.08) 0%, transparent 40%, rgba(35,35,35,0.78) 100%);"></div>
+        <div class="absolute top-4 left-4" style="background:rgba(249,245,240,0.18); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,0.2); border-radius:99px; padding:0.3rem 0.75rem;">
+          <p class="font-sans uppercase tracking-widest text-white" style="font-size:0.45rem; letter-spacing:0.35em;">Luksozi</p>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
+          <div>
+            <p class="font-serif text-white font-light mb-0.5" style="font-size:1.05rem; letter-spacing:0.04em;">Rafinim</p>
+            <p class="font-sans text-white/45 uppercase tracking-widest" style="font-size:0.42rem; letter-spacing:0.3em;">Studio Eli</p>
+          </div>
+          <span class="font-serif select-none" style="font-size:2.8rem; line-height:1; font-weight:700; color:rgba(255,255,255,0.1); letter-spacing:-0.04em;">06</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Swipe dots (mobile only) -->
+    <div class="swipe-dots px-10" id="gallery-dots">
+      <span class="swipe-dot active"></span>
+      <span class="swipe-dot"></span>
+      <span class="swipe-dot"></span>
+      <span class="swipe-dot"></span>
+      <span class="swipe-dot"></span>
+      <span class="swipe-dot"></span>
+    </div>
+
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────
+       TAUPE BAND — editorial CTA strip
+  ───────────────────────────────────────────────────────────── -->
+  <section class="relative overflow-hidden" style="background:#BD9A7A; padding: 7rem 2rem;">
+
+    <!-- BG: large ghost watermark letters -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden" aria-hidden="true">
+      <span class="font-serif" style="font-size: clamp(14rem, 35vw, 28rem); font-weight:700; color:rgba(249,245,240,0.06); line-height:1; letter-spacing:-0.05em; white-space:nowrap;">ELI</span>
+    </div>
+
+    <!-- BG: soft radial glow top-left -->
+    <div class="absolute pointer-events-none" style="top:-10%; left:-8%; width:55vw; height:55vw; max-width:600px; max-height:600px; border-radius:50%; background:radial-gradient(circle, rgba(234,216,199,0.22) 0%, transparent 70%);"></div>
+
+    <!-- BG: soft radial glow bottom-right -->
+    <div class="absolute pointer-events-none" style="bottom:-15%; right:-5%; width:45vw; height:45vw; max-width:500px; max-height:500px; border-radius:50%; background:radial-gradient(circle, rgba(35,35,35,0.12) 0%, transparent 70%);"></div>
+
+    <!-- BG: diagonal hairlines -->
+    <div class="absolute inset-0 pointer-events-none" style="background-image: repeating-linear-gradient(135deg, rgba(249,245,240,0.045) 0px, rgba(249,245,240,0.045) 1px, transparent 1px, transparent 48px);"></div>
+
+    <!-- BG: top + bottom thin accent lines -->
+    <div class="absolute top-0 left-0 right-0 pointer-events-none" style="height:2px; background:linear-gradient(to right, transparent, rgba(249,245,240,0.35), transparent);"></div>
+    <div class="absolute bottom-0 left-0 right-0 pointer-events-none" style="height:2px; background:linear-gradient(to right, transparent, rgba(249,245,240,0.35), transparent);"></div>
+
+    <!-- Corner: top-left -->
+    <div class="absolute top-6 left-6 pointer-events-none select-none" aria-hidden="true">
+      <div style="width:28px; height:28px; border-top:1px solid rgba(249,245,240,0.45); border-left:1px solid rgba(249,245,240,0.45);"></div>
+      <p class="font-serif" style="font-size:0.52rem; color:rgba(249,245,240,0.4); letter-spacing:0.25em; margin-top:4px; font-style:italic;">eli</p>
+    </div>
+
+    <!-- Corner: top-right -->
+    <div class="absolute top-6 right-6 pointer-events-none select-none flex flex-col items-end" aria-hidden="true">
+      <div style="width:28px; height:28px; border-top:1px solid rgba(249,245,240,0.45); border-right:1px solid rgba(249,245,240,0.45);"></div>
+      <p class="font-serif" style="font-size:0.52rem; color:rgba(249,245,240,0.4); letter-spacing:0.25em; margin-top:4px; font-style:italic;">eli</p>
+    </div>
+
+    <!-- Corner: bottom-left -->
+    <div class="absolute bottom-6 left-6 pointer-events-none select-none flex flex-col justify-end" aria-hidden="true">
+      <p class="font-serif" style="font-size:0.52rem; color:rgba(249,245,240,0.4); letter-spacing:0.25em; margin-bottom:4px; font-style:italic;">eli</p>
+      <div style="width:28px; height:28px; border-bottom:1px solid rgba(249,245,240,0.45); border-left:1px solid rgba(249,245,240,0.45);"></div>
+    </div>
+
+    <!-- Corner: bottom-right -->
+    <div class="absolute bottom-6 right-6 pointer-events-none select-none flex flex-col items-end justify-end" aria-hidden="true">
+      <p class="font-serif" style="font-size:0.52rem; color:rgba(249,245,240,0.4); letter-spacing:0.25em; margin-bottom:4px; font-style:italic;">eli</p>
+      <div style="width:28px; height:28px; border-bottom:1px solid rgba(249,245,240,0.45); border-right:1px solid rgba(249,245,240,0.45);"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-5xl mx-auto">
+
+      <!-- Top rule + label -->
+      <div class="flex items-center gap-4 mb-10">
+        <div style="flex:1; height:1px; background:rgba(249,245,240,0.3);"></div>
+        <p class="font-sans uppercase tracking-widest" style="font-size:0.5rem; letter-spacing:0.45em; color:rgba(249,245,240,0.7);">Studio Eli — Tiranë</p>
+        <div style="flex:1; height:1px; background:rgba(249,245,240,0.3);"></div>
+      </div>
+
+      <!-- Large quote -->
+      <h2 class="font-serif text-center mb-14 reveal-text" style="font-size: clamp(2.2rem, 6vw, 5rem); color:#F9F5F0; font-weight:400; letter-spacing:-0.02em; line-height:1.15;">
+        Bukuria nuk është<br/>
+        <em style="font-style:italic; font-weight:300; color:rgba(249,245,240,0.75);">luks — është kujdes.</em>
+      </h2>
+
+      <!-- Stats row -->
+      <div class="flex items-center justify-center gap-0 mb-14 flex-wrap">
+        <div class="text-center px-8 md:px-14 py-4">
+          <p class="font-serif" style="font-size:3rem; color:#F9F5F0; font-weight:400; line-height:1;">10+</p>
+          <p class="font-sans uppercase tracking-widest mt-2" style="font-size:0.48rem; letter-spacing:0.4em; color:rgba(249,245,240,0.65);">Vite Ekselencë</p>
+        </div>
+        <div style="width:1px; height:3rem; background:rgba(249,245,240,0.25);"></div>
+        <div class="text-center px-8 md:px-14 py-4">
+          <p class="font-serif" style="font-size:3rem; color:#F9F5F0; font-weight:400; line-height:1;">500+</p>
+          <p class="font-sans uppercase tracking-widest mt-2" style="font-size:0.48rem; letter-spacing:0.4em; color:rgba(249,245,240,0.65);">Klientë të Kënaqur</p>
+        </div>
+        <div style="width:1px; height:3rem; background:rgba(249,245,240,0.25);"></div>
+        <div class="text-center px-8 md:px-14 py-4">
+          <p class="font-serif" style="font-size:3rem; color:#F9F5F0; font-weight:400; line-height:1;">100%</p>
+          <p class="font-sans uppercase tracking-widest mt-2" style="font-size:0.48rem; letter-spacing:0.4em; color:rgba(249,245,240,0.65);">Përkushtim</p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="flex justify-center">
+        <a href="#footer" class="font-sans uppercase tracking-widest" style="font-size:0.6rem; letter-spacing:0.35em; color:#BD9A7A; background:#F9F5F0; padding:0.9rem 2.4rem; border-radius:99px; box-shadow: 0 4px 24px rgba(35,35,35,0.15);">Rezervo Tani</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────
+       ABOUT / PHILOSOPHY STRIP
+  ───────────────────────────────────────────────────────────── -->
+  <section class="px-10 md:px-20 lg:px-28 grid md:grid-cols-2 gap-16 items-center" style="padding-top: 8rem; padding-bottom: 8rem;">
+
+    <div class="relative h-96 md:h-[520px] overflow-hidden">
+      <img
+        data-parallax
+        src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=80&fit=crop"
+        alt="Studio interior"
+        class="w-full h-full object-cover reveal-img"
+        style="transform: scale(1.08);"
+      />
+    </div>
+
+    <div>
+      <p class="reveal-text font-sans text-taupe uppercase tracking-widest text-xs mb-6" style="letter-spacing:0.3em;">Filozofia Jonë</p>
+      <h2 class="reveal-text font-serif leading-tight mb-8" style="font-size: clamp(2.2rem, 3.5vw, 3.2rem);">
+        Bukuria si një<br /><em style="color:#BD9A7A;">Praktikë Ditore</em>
+      </h2>
+      <p class="reveal-text font-sans font-light text-sm leading-loose mb-6" style="letter-spacing:0.05em; color:#555; max-width: 400px;">
+        Besojmë se bukuria nuk është një destinacion, por një ritual — një akt i vetëdijshëm i kujdesit personal që rinovon shpirtin dhe rikthen qartësinë. Çdo detaj i studios sonë është krijuar për të nxitur këtë qëllim.
+      </p>
+      <p class="reveal-text font-sans font-light text-sm leading-loose" style="letter-spacing:0.05em; color:#555; max-width: 400px;">
+        Praktikuesit tanë janë artizanë, të trajnuar në filozofinë se teknika dhe prekja janë të pandashme.
+      </p>
+      <div class="mt-10">
+        <a href="#" class="font-sans uppercase tracking-widest" style="font-size:0.6rem; letter-spacing:0.35em; color:#232323; background:#BD9A7A; padding:0.9rem 2.2rem; border-radius:99px; display:inline-block;">Historia Jonë</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ─────────────────────────────────────────────────────────────
+       FOOTER
+  ───────────────────────────────────────────────────────────── -->
+  <footer id="footer" class="px-10 md:px-20 lg:px-28" style="padding-top: 0; padding-bottom: 3rem;">
+
+    <!-- ── Contact Band ── -->
+    <div class="py-16 md:py-20" style="border-top: 1px solid #EAD8C7; border-bottom: 1px solid #EAD8C7; margin-bottom: 4rem;">
+      <div class="flex flex-col items-center text-center md:flex-row md:items-center md:justify-between md:text-left gap-10">
+
+        <!-- Label + heading -->
+        <div class="flex-shrink-0">
+          <p class="font-sans text-xs uppercase tracking-widest text-taupe mb-3" style="letter-spacing:0.3em;">Na Kontaktoni</p>
+          <h3 class="font-serif leading-tight" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">
+            Jemi këtu<br /><em style="color:#BD9A7A;">për ju.</em>
+          </h3>
+        </div>
+
+        <!-- Divider mobile horizontal / desktop vertical -->
+        <div class="block md:hidden self-stretch" style="height:1px; width:60px; background:#EAD8C7; margin: 0 auto;"></div>
+        <div class="hidden md:block self-stretch" style="width:1px; background:#EAD8C7; flex-shrink:0;"></div>
+
+        <!-- Contact items -->
+        <div class="flex flex-col items-center md:items-start md:flex-row gap-10 md:gap-16 flex-1">
+
+          <!-- Phone -->
+          <div>
+            <p class="font-sans text-xs uppercase tracking-widest text-taupe mb-3" style="letter-spacing:0.25em;">Telefon</p>
+            <a href="tel:+355691234567" class="font-serif text-xl hover:text-taupe transition-colors" style="letter-spacing:0.04em;">+355 69 123 4567</a>
+          </div>
+
+          <!-- Email -->
+          <div>
+            <p class="font-sans text-xs uppercase tracking-widest text-taupe mb-3" style="letter-spacing:0.25em;">Email</p>
+            <a href="mailto:info@studioeli.al" class="font-serif text-xl hover:text-taupe transition-colors" style="letter-spacing:0.04em;">info@studioeli.al</a>
+          </div>
+
+          <!-- Location -->
+          <div>
+            <p class="font-sans text-xs uppercase tracking-widest text-taupe mb-3" style="letter-spacing:0.25em;">Adresa</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Rruga+Myslym+Shyri+Tiranë+Shqipëri" target="_blank" rel="noopener noreferrer" class="font-serif text-xl hover:text-taupe transition-colors" style="letter-spacing:0.04em;">Rruga Myslym Shyri<br /><span class="font-sans font-light text-sm text-taupe" style="letter-spacing:0.06em;">Tiranë, Shqipëri ↗</span></a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Top row -->
+    <div class="grid md:grid-cols-3 gap-12 mb-16">
+
+
+      <!-- Navigation -->
+      <div>
+        <p class="font-sans text-xs uppercase tracking-widest text-taupe mb-6" style="letter-spacing:0.25em;">Navigimi</p>
+        <ul class="space-y-3">
+          <li><a href="#" class="font-sans font-light text-sm hover:text-taupe transition-colors" style="letter-spacing:0.08em;">Studio</a></li>
+          <li><a href="#services" class="font-sans font-light text-sm hover:text-taupe transition-colors" style="letter-spacing:0.08em;">Shërbime</a></li>
+          <li><a href="#galeria" class="font-sans font-light text-sm hover:text-taupe transition-colors" style="letter-spacing:0.08em;">Galeria</a></li>
+          <li><a href="#footer" class="font-sans font-light text-sm hover:text-taupe transition-colors" style="letter-spacing:0.08em;">Rezervo Tani</a></li>
+        </ul>
+      </div>
+
+      <!-- Hours -->
+      <div>
+        <p class="font-sans text-xs uppercase tracking-widest text-taupe mb-6" style="letter-spacing:0.25em;">Orët e Studios</p>
+        <ul class="space-y-2">
+          <li class="font-sans font-light text-xs text-taupe leading-loose" style="letter-spacing:0.06em;">E Hënë – E Premte &nbsp; 9:00 – 20:00</li>
+          <li class="font-sans font-light text-xs text-taupe leading-loose" style="letter-spacing:0.06em;">E Shtunë &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00 – 18:00</li>
+          <li class="font-sans font-light text-xs text-taupe leading-loose" style="letter-spacing:0.06em;">E Diel &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10:00 – 16:00</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="thin-line mb-8" />
+
+    <!-- Bottom row -->
+    <div class="flex items-center justify-center">
+      <p class="font-sans text-xs text-taupe" style="letter-spacing:0.1em;">© 2026 Website i Krijuar nga <a href="mailto:sk70342@universum-ks.org" class="hover:text-charcoal transition-colors">sk70342@universum-ks.org</a></p>
+    </div>
+
+  </footer>
+
+
+  <!-- ─────────────────────────────────────────────────────────────
+       GSAP ANIMATIONS
+  ───────────────────────────────────────────────────────────── -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+
+    // ── Hero entrance ──────────────────────────────────────────
+    gsap.set(['#hero-eyebrow','#hero-title','#hero-body','#hero-cta','#hero-cta-mobile'], { y: 40, opacity: 0 });
+
+    gsap.timeline({ delay: 0.15 })
+      .to('#hero-eyebrow',    { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, 0.3)
+      .to('#hero-title',      { opacity: 1, y: 0, duration: 1.1, ease: 'power3.out' }, 0.55)
+      .to('#hero-body',       { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, 0.95)
+      .to('#hero-cta',        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, 1.15)
+      .to('#hero-cta-mobile', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, 1.3);
+
+    // ── Filozofia section animations ──────────────────────────
+    gsap.set('.filozofia-el', { opacity: 0, y: 40 });
+    gsap.set('.filozofia-img', { opacity: 0, x: 60 });
+    gsap.set('.filozofia-badge', { opacity: 0, y: 20 });
+
+    ScrollTrigger.create({
+      trigger: '#filozofia',
+      start: 'top 70%',
+      onEnter: () => {
+        gsap.to('.filozofia-el', {
+          opacity: 1, y: 0,
+          duration: 0.85,
+          ease: 'power3.out',
+          stagger: 0.15
         });
-      }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
-      revealElements.forEach((el) => revealObserver.observe(el));
-
-      const heroSection = document.querySelector('#home');
-      const updateHeroParallax = () => {
-        if (!heroSection) return;
-        const rect = heroSection.getBoundingClientRect();
-        const offset = Math.max(Math.min(rect.top * 0.15, 36), -36);
-        heroSection.style.setProperty('--hero-parallax', `${offset}px`);
-      };
-      let frame;
-      const onScroll = () => {
-        if (frame) return;
-        frame = requestAnimationFrame(() => {
-          updateHeroParallax();
-          frame = null;
+        gsap.to('.filozofia-img', {
+          opacity: 1, x: 0,
+          duration: 1.1,
+          ease: 'power3.out',
+          delay: 0.2
         });
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-      window.addEventListener('resize', onScroll);
-      onScroll();
-
-      const interactiveElements = document.querySelectorAll('a, button');
-      interactiveElements.forEach((element) => {
-        element.addEventListener('pointerdown', () => element.classList.add('pressed'));
-        element.addEventListener('pointerup', () => element.classList.remove('pressed'));
-        element.addEventListener('pointerleave', () => element.classList.remove('pressed'));
-        element.addEventListener('pointercancel', () => element.classList.remove('pressed'));
-      });
-
-      // Mobile menu toggle
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
+        gsap.to('.filozofia-badge', {
+          opacity: 1, y: 0,
+          duration: 0.7,
+          ease: 'power3.out',
+          delay: 0.9
         });
       }
+    });
 
-      // Mobile Sticky Header (only on screens < 768px)
-      const header = document.getElementById('main-header');
-      let lastScrollY = window.scrollY;
-      let isMobile = window.innerWidth < 768;
-
-      function updateMobileHeader() {
-        if (!isMobile) return;
-
-        const currentScrollY = window.scrollY;
-        const scrollDelta = currentScrollY - lastScrollY;
-
-        // Add scrolled class when not at top
-        if (currentScrollY > 10) {
-          header.classList.add('header--scrolled');
-        } else {
-          header.classList.remove('header--scrolled');
-        }
-
-        // Hide/show header based on scroll direction
-        if (scrollDelta > 5 && currentScrollY > 100) {
-          // Scrolling down and past threshold
-          header.classList.add('header--hidden');
-        } else if (scrollDelta < -5 || currentScrollY <= 100) {
-          // Scrolling up or near top
-          header.classList.remove('header--hidden');
-        }
-
-        lastScrollY = currentScrollY;
-      }
-
-      // Throttle scroll events for better performance
+    // ── Nav hide on scroll down / show on scroll up ────────────
+    (function() {
+      const nav = document.getElementById('main-nav');
+      let lastY = window.scrollY;
       let ticking = false;
-      function onScrollMobile() {
+      window.addEventListener('scroll', () => {
         if (!ticking) {
-          requestAnimationFrame(() => {
-            updateMobileHeader();
+          window.requestAnimationFrame(() => {
+            const currentY = window.scrollY;
+            if (currentY > lastY && currentY > 80) {
+              nav.style.transform = 'translateY(-100%)';
+              nav.style.opacity = '0';
+            } else {
+              nav.style.transform = 'translateY(0)';
+              nav.style.opacity = '1';
+            }
+            lastY = currentY;
             ticking = false;
           });
           ticking = true;
         }
+      }, { passive: true });
+    })();
+
+    // ── Generic reveal: .reveal-text elements ─────────────────
+    gsap.utils.toArray('.reveal-text').forEach((el) => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 85%',
+          toggleActions: 'play none none none',
+        },
+        opacity: 0,
+        y: 30,
+        duration: 0.9,
+        ease: 'power3.out',
+      });
+    });
+
+    // ── Reveal images ─────────────────────────────────────────
+    gsap.utils.toArray('.reveal-img').forEach((el) => {
+      gsap.from(el, {
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+        clipPath: 'inset(0 100% 0 0)',
+        duration: 1.2,
+        ease: 'power3.inOut',
+      });
+    });
+
+    // ── Service cards stagger reveal ─────────────────────────
+    gsap.from('.service-card', {
+      scrollTrigger: {
+        trigger: '.masonry',
+        start: 'top 80%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      y: 40,
+      duration: 0.9,
+      stagger: 0.12,
+      ease: 'power3.out',
+    });
+
+    // ── Parallax on [data-parallax] images ───────────────────
+    gsap.utils.toArray('[data-parallax]').forEach((img) => {
+      gsap.to(img, {
+        scrollTrigger: {
+          trigger: img.closest('.service-card') || img.parentElement,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1.2,
+        },
+        y: '-8%',
+        scale: 1.1,
+        ease: 'none',
+      });
+    });
+
+    // ── Quote section big fade ────────────────────────────────
+    gsap.from('.quote-mark', {
+      scrollTrigger: {
+        trigger: '#statement',
+        start: 'top 75%',
+      },
+      opacity: 0,
+      scale: 0.85,
+      duration: 1.1,
+      ease: 'power3.out',
+    });
+
+  </script>
+
+  <script>
+    // ── Mobile menu toggle ──────────────────────────────────────
+    const mobMenu    = document.getElementById('mob-menu');
+    const mobBtn     = document.getElementById('mob-menu-btn');
+    const bar1       = document.getElementById('bar1');
+    const bar2       = document.getElementById('bar2');
+    const bar3       = document.getElementById('bar3');
+    let menuOpen     = false;
+
+    mobBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobMenu.style.opacity = '1';
+        mobMenu.style.pointerEvents = 'auto';
+        bar1.style.transform = 'translateY(7px) rotate(45deg)';
+        bar1.style.width = '24px';
+        bar2.style.opacity = '0';
+        bar3.style.transform = 'translateY(-7px) rotate(-45deg)';
+        bar3.style.width = '24px';
+      } else {
+        closeMobMenu();
+      }
+    });
+
+    function closeMobMenu() {
+      menuOpen = false;
+      mobMenu.style.opacity = '0';
+      mobMenu.style.pointerEvents = 'none';
+      bar1.style.transform = '';
+      bar1.style.width = '24px';
+      bar2.style.opacity = '1';
+      bar3.style.transform = '';
+      bar3.style.width = '24px';
+    }
+  </script>
+
+  <script>
+    // ── Gallery: dots sync + mouse drag (no cloning) ─────────────
+    (function() {
+      const strip = document.getElementById('gallery-strip');
+      const dots  = document.querySelectorAll('#gallery-dots .swipe-dot');
+      if (!strip) return;
+
+      function isMobile() { return window.innerWidth < 768; }
+
+      function getCardW() {
+        const card = strip.querySelector('.gallery-card');
+        if (!card) return 0;
+        const gap = 12; // gap-3 = 0.75rem = 12px
+        return card.offsetWidth + gap;
       }
 
-      function checkMobile() {
-        isMobile = window.innerWidth < 768;
-        if (isMobile) {
-          window.addEventListener('scroll', onScrollMobile, { passive: true });
-          updateMobileHeader();
-        } else {
-          window.removeEventListener('scroll', onScrollMobile);
-          header.classList.remove('header--hidden', 'header--scrolled');
-        }
+      // Sync dots on scroll
+      strip.addEventListener('scroll', () => {
+        if (!isMobile()) return;
+        const cw = getCardW();
+        if (!cw) return;
+        const idx = Math.min(Math.round(strip.scrollLeft / cw), dots.length - 1);
+        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      }, { passive: true });
+
+      // Mouse drag for desktop swipe feel
+      let isDown = false, startX, scrollLeft0, velX = 0, lastX = 0, rafId;
+      strip.addEventListener('mousedown', e => {
+        isDown = true;
+        strip.style.scrollBehavior = 'auto';
+        strip.style.cursor = 'grabbing';
+        startX   = e.pageX - strip.offsetLeft;
+        scrollLeft0 = strip.scrollLeft;
+        velX = 0; lastX = e.pageX;
+        cancelAnimationFrame(rafId);
+      });
+      strip.addEventListener('mouseleave', () => { if (isDown) release(); });
+      strip.addEventListener('mouseup',    () => { if (isDown) release(); });
+      strip.addEventListener('mousemove',  e => {
+        if (!isDown) return;
+        e.preventDefault();
+        velX = e.pageX - lastX;
+        lastX = e.pageX;
+        strip.scrollLeft = scrollLeft0 - (e.pageX - strip.offsetLeft - startX);
+      });
+      function release() {
+        isDown = false;
+        strip.style.cursor = 'grab';
+        strip.style.scrollBehavior = 'smooth';
+        let v = velX * 8;
+        (function coast() {
+          if (Math.abs(v) < 0.5) return;
+          strip.scrollLeft -= v;
+          v *= 0.88;
+          rafId = requestAnimationFrame(coast);
+        })();
       }
 
-      window.addEventListener('resize', checkMobile);
-      checkMobile(); // Initial check
-    </script>
-  </body>
+      strip.querySelectorAll('img').forEach(img => img.setAttribute('draggable', 'false'));
+    })();
+  </script>
+
+  <script>
+    function handleNLSubmit(e) {
+      e.preventDefault();
+      const email   = document.getElementById('nl-email');
+      const success = document.getElementById('nl-success');
+      const error   = document.getElementById('nl-error');
+      const btn     = e.target.querySelector('.nl-btn');
+      const re      = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      success.style.display = 'none';
+      error.style.display   = 'none';
+
+      if (!re.test(email.value.trim())) {
+        error.style.display = 'block';
+        return;
+      }
+
+      btn.textContent = '...';
+      btn.disabled    = true;
+
+      setTimeout(() => {
+        btn.textContent        = 'Abonuar ✓';
+        btn.style.background   = '#BD9A7A';
+        success.style.display  = 'block';
+        email.value            = '';
+        email.disabled         = true;
+      }, 800);
+    }
+  </script>
+
+</body>
 </html>
-
-
