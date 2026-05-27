@@ -649,9 +649,28 @@
         justify-content: center;
         transition: background 0.3s ease, border-color 0.3s ease;
       }
-      .hamburger-btn:hover {
-        background: rgba(229,209,176,0.15);
-        border-color: rgba(229,209,176,0.35);
+      @media (hover: hover) {
+        .hamburger-btn:hover {
+          background: rgba(229,209,176,0.15);
+          border-color: rgba(229,209,176,0.35);
+        }
+      }
+      /* Keep the header hamburger above the mobile menu overlay so it can toggle open/close */
+      #mobile-menu-button {
+        position: relative;
+        z-index: 70;
+      }
+      /* In-menu X also closes the menu (handled by JS delegation) */
+      #mobile-menu-close {
+        position: relative;
+        z-index: 70;
+      }
+      .hamburger-btn:focus {
+        outline: none;
+      }
+      .hamburger-btn:focus-visible {
+        outline: 2px solid rgba(229,209,176,0.6);
+        outline-offset: 2px;
       }
       .hamburger-icon {
         position: relative;
@@ -1543,13 +1562,28 @@
         mobileMenuButton.classList.remove('is-open');
         mobileMenuButton.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('menu-open');
+        // Clear lingering hover/focus state on touch devices
+        if (mobileMenuClose) mobileMenuClose.blur();
+        mobileMenuButton.blur();
       };
       if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
+        let lastCloseAt = 0;
+        mobileMenuButton.addEventListener('click', (e) => {
+          if (Date.now() - lastCloseAt < 500) { e.preventDefault(); return; }
           mobileMenu.classList.contains('is-open') ? closeMenu() : openMenu();
         });
-        mobileMenuClose && mobileMenuClose.addEventListener('click', closeMenu);
-        mobileMenu.querySelectorAll('[data-close]').forEach(a => a.addEventListener('click', closeMenu));
+        // Event delegation: any tap inside the open menu on the close button or data-close closes it
+        document.addEventListener('click', (e) => {
+          if (!mobileMenu.classList.contains('is-open')) return;
+          const closer = e.target.closest('#mobile-menu-close, [data-close]');
+          if (!closer) return;
+          if (closer.id === 'mobile-menu-close') {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+          lastCloseAt = Date.now();
+          closeMenu();
+        }, true);
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
       }
 
